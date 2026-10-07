@@ -1,0 +1,98 @@
+\documentclass[a4paper]{article}
+
+\input{patterns_L2_22}
+\input{../../packages}
+\input{../../custom_commands}
+\input{../../tikz_commands}
+
+\usepackage[english]{babel}
+
+\usepackage[
+left=2.5cm,
+right=2.5cm,
+top=3cm,
+bottom=2.5cm
+]{geometry}
+
+\setlength{\droptitle}{-7em}
+\title{\Huge Physics Olympiad L2-22}
+\author{BigChunguz24 - Last Edit 30/09/2026}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\Problem
+	\textbf{\underline{Rolling Plank}}
+	\\
+	% A Guide To Physics Problems Part 1 - Problem 1.5
+	A uniform thin rigid rod of mass $M$ is supported by two rotating rollers whose axes are separated by a fixed distance $a$. The rod is initially placed at rest asymmetrically at a distance $x_0$ away from the equilibrium position. The coefficient of friction between the bar and the rollers is $\mu$. Determine the displacement of the centre of mass of the rod $x(t)$ when:
+	\begin{description}
+		\item[$\bullet$] The rollers rotate in opposite direction as shown in the figure;
+		\item[$\bullet$] The rollers rotate in reverse directions to the ones shown in the figure;
+	\end{description}
+	
+	\input{figures_tex/p1_rolling_plank}
+	
+	\Problem
+	\textbf{\underline{Interacting Dipoles}}
+	\\
+	% Irodov 3.39 + 3.40 + 3.41 + Addition
+	Assume you are given a dipole with known charge $q$ and length $l$, or equivalently the dipole moment $\vv{p}$.
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] Find an expression for the potential $\varphi$ of the dipole at point $S$ as shown on the figure below;
+		\item[$\bullet$] Using this expression, find the polar components of the electric field strength vector;
+		\item[$\bullet$] Find the points at which $\vv{E}$ is perpendicular to $\vv{p}$;
+		\item[$\bullet$] The dipole is placed in an external uniform electric field whose strength is $\vv{E_0} \uparrow \uparrow \vv{p}$. In this case one of the equipotential surfaces enclosing the dipole forms a sphere. Determine the radius of this sphere;
+		\item[$\bullet$] In figures $1)$ through $8)$ two identical dipoles are placed in different arrangements as shown, with their centres being a distance $d >> l$ from one another in each case. For each arrangement shown find approximated expressions for the energy of interaction $E_p$ and the force of interaction $\vv{F}$.
+	\end{description}
+	
+	\input{figures_tex/p2_interacting_dipoles}
+	
+	\Problem
+	\textbf{\underline{Wave Superposition}}
+	\\
+	% Irodov 4.160
+	Two plane waves $\psi_1$ and $\psi_2$ propagate without energy loss in a homogeneous elastic medium, one along the $x$-axis and the other along the $y$-axis: 
+	\begin{description}
+		\item[$\rightarrow$] $\psi_1(x, t) = a \cos(\omega t - k x)$;
+		\item[$\rightarrow$] $\psi_2(x, t) = a \cos(\omega t - k y)$;
+	\end{description}
+	Find the wave motion pattern of the particles in the plane $xy$ if both waves are:
+	\begin{description}
+		\item[$\bullet$]  transverse and their oscillation directions coincide;
+		\item[$\bullet$] longitudinal.
+	\end{description}
+	
+	\Problem
+	\textbf{\underline{Oscillating Capacitor}}
+	\\
+	% Задачи Московских Физических Олимпиад - 3.39
+	Plate $A$ of a parallel-plate capacitor is fixed, while plate $B$ is attached to a wall with a spring and can move while remaining parallel to plate $A$. After closing the switch $K$, plate $B$ starts moving and eventually stops in a new equilibrium position. In this case, the initial equilibrium distance $d$ between the capacitor plates (when the spring is not stretched) decreases by $\eta = 10\%$. How much would the equilibrium distance between the plates change if the switch $K$ were closed for a short time? Assume that during this time, plate $B$ does not have time to move significantly.
+	
+	\input{figures_tex/p4_oscillating_capacitor}
+		
+	\Problem
+	\textbf{\underline{Body-Pulley System}}
+	\\
+	% Новосибирски 2008 - 2.1.47
+	Find the acceleration of the bodies in the system shown in the figure. The force $F$ is applied along the direction of the string to one of the bodies of mass $m$. The sections of the string on both sides of the light pulley, which is attached to a body of mass $M$, are parallel.
+	
+	\input{figures_tex/p5_body_pulley_system}
+	
+	\Problem
+	\textbf{\underline{Battery Efficiency}}
+	\\
+	% 200 Puzzling Physics Problems - 155
+	A battery consists of $N$ identical cells, each of e.m.f. $\varepsilon$. Is it true that the energy wasted when using the battery to charge a capacitor through a resistor can be reduced by charging it in $N$ stages? That is by connecting it first across a single cell, and then across two cells, and so on, rather than across the whole battery in a single step.
+
+	
+	\input{../../appendix_formulae}
+	
+	% A Guide To Physics Problems Part 1 - Problem 1.5
+	% Irodov 3.39 + 3.40 + 3.41 + Addition
+	% Irodov 4.160
+	% Задачи Московских Физических Олимпиад - 3.39
+	% Новосибирски 2008 - 2.1.47
+	% 200 Puzzling Physics Problems - 155
+\end{document}

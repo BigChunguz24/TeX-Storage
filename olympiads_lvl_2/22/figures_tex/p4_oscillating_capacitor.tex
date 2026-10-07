@@ -1,0 +1,55 @@
+\begin{center}
+	\begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
+		% Left Capacitor Plate
+		\draw[line]  (90,150) -- (100,150) -- (100,250) -- (90,250) -- cycle ;
+		\begin{scope}
+			\clip (90,150) rectangle (100,250);
+			
+			\foreach \x in {-100,-92,...,100} {
+				\draw[line width=0.75pt]
+				(\x,150) -- ++(100,100);
+			}
+		\end{scope}
+		
+		% Right Capacitor Plate
+		\draw[line]  (150,150) -- (160,150) -- (160,250) -- (150,250) -- cycle ;
+		\begin{scope}
+			\clip (150,150) rectangle (160,250);
+			
+			\foreach \x in {50,58,...,154} {
+				\draw[line width=0.75pt]
+				(\x,150) -- ++(100,100);
+			}
+		\end{scope}
+		
+		% Hatching on the RHS
+		\draw [line]    (325,150) -- (325,250) ;
+		\begin{scope}
+			\clip (325,150) rectangle (335,250);
+			
+			\foreach \x in {225,233,...,334} {
+				\draw[line width=0.75pt]
+				(\x,150) -- ++(100,100);
+			}
+		\end{scope}
+		
+		% Spring
+		\draw[spring] (160, 200) -- (325, 200);
+		
+		% Connectors, Switch and Battery
+		\draw[line] (95,330) -- (155,330) ;
+		\draw[switch] (155,250) -- (155,330)
+		node[midway, left] {$K$};
+		\draw[battery] (95, 250) -- (95, 330);
+
+		% Straight Lines and Dashed Lines
+		\draw[line, {Stealth}-{Stealth}]    (100,125) -- (150,125) 
+		node[midway, above] {$d$};
+		\draw[line, dashed] (100,125) -- (100,150) ;
+		\draw[line, dashed] (150,125) -- (150,150) ;
+		
+		% Text Node
+		\draw (90, 150) node[above] {$A$};
+		\draw (160, 150) node[above] {$B$};
+	\end{tikzpicture}
+\end{center}
