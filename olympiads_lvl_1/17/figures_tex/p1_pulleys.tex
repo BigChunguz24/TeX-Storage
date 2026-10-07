@@ -1,0 +1,80 @@
+\begin{center}
+	\begin{tikzpicture}
+		\def\shift{6cm}
+		
+		% Ceilings
+		\draw[line] (1, 12) -- (6, 12);
+		\draw[line, xshift=\shift] (1, 12) -- (6, 12);
+		
+		% Ceiling hatchings
+		\foreach \x in {1, 1.25, ..., 6}
+		\draw[line] (\x, 12) -- ++(0.25,0.25);
+		
+		\foreach \x in {1, 1.25, ..., 6}
+		\draw[line, xshift=\shift] (\x, 12) -- ++(0.25,0.25);
+		
+		% Pulleys
+		\draw[line width=1.5pt] 
+		(3.5, 6) circle[radius=0.75];
+		
+		\draw[line width=1.5pt, xshift=\shift] 
+		(3.5, 6) circle[radius=0.75];
+		
+		% Upper connector (above springs)
+		\draw[line] (2.75, 12) -- (2.75, 11);
+		\draw[line] (4.25, 12) -- (4.25, 10.5);
+		
+		\draw[line, xshift=\shift] (2.75, 12) -- (2.75, 11);
+		\draw[line, xshift=\shift] (4.25, 12) -- (4.25, 10.5);
+		
+		% Lower connectors (below springs)
+		\draw[line] (2.75, 7) -- (2.75, 6);
+		\draw[line] (4.25, 7.5) -- (4.25, 6);
+		\draw[line, xshift=\shift] (2.75, 7) -- (2.75, 6);
+		\draw[line, xshift=\shift] (4.25, 7.5) -- (4.25, 6);
+		
+		% Spring points
+		\node[point, label=left:$A$] at (2.75, 11) {};
+		\node[point, label=left:$B$] at (2.75, 9) {};
+		\node[point, label=left:$C$] at (2.75, 7) {};
+		\node[point, label=right:$D$] at (4.25, 10.5) {};
+		\node[point, label=right:$E$] at (4.25, 7.5) {};
+		
+		\node[point, xshift=\shift] at (2.75, 11) {};
+		\node[point, xshift=\shift] at (2.75, 9) {};
+		\node[point, xshift=\shift] at (2.75, 7) {};
+		\node[point, xshift=\shift] at (4.25, 10.5) {};
+		\node[point, xshift=\shift] at (4.25, 7.5) {};
+		
+		% Springs
+		\draw[spring] (2.75, 11) -- (2.75, 9);
+		\draw[spring] (2.75, 9) -- (2.75, 7);
+		\draw[spring] (4.25, 10.5) -- (4.25, 7.5);
+		
+		\draw[spring, xshift=\shift] (2.75, 11) -- (2.75, 9);
+		\draw[spring, xshift=\shift] (2.75, 9) -- (2.75, 7);
+		\draw[spring, xshift=\shift] (4.25, 10.5) -- (4.25, 7.5);
+		
+		% Spring Stiffness
+		\node[left] at (2.5, 10) {$k$};
+		\node[left] at (2.5, 8) {$2k$};
+		\node[right] at (4.5, 9) {$3k$};
+		
+		\node[left, xshift=\shift] at (2.5, 10) {$k$};
+		\node[left, xshift=\shift] at (2.5, 8) {$2k$};
+		\node[right, xshift=\shift] at (4.5, 9) {$3k$};
+		
+		% Pulley centres
+		\node[point] at (3.5, 6) {};
+		\node[point, xshift=\shift] at (3.5, 6) {};
+		
+		% Vector
+		\draw[line, -{Stealth}] (3.5, 6) -- (3.5, 4.5);
+		\node[right] at (3.5, 4.5) {$\vv{v}$};
+		
+		% Mass
+		\draw[line, xshift=\shift] (3.5, 6) -- (3.5, 4.5);
+		\draw[line, xshift=\shift] (3, 4) rectangle (4, 4.5);
+		\node at (9.5, 4.25) {$m$};
+	\end{tikzpicture}
+\end{center}

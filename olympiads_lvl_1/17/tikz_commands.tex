@@ -1,0 +1,84 @@
+\tikzset{
+	line/.style={
+		line width=1.5pt,
+	}
+}
+
+\tikzset{
+	point/.style={
+		circle,
+		fill=black,
+		inner sep=1.5pt
+	}
+}
+
+\tikzset{
+	spring/.style={
+		decorate,
+		decoration={
+			coil,
+			aspect=0.6,
+			segment length=7pt,
+			amplitude=6pt,
+			pre length=5pt,
+			post length=5pt
+		},
+		line width=1.5pt
+	}
+}
+
+\tikzset{
+	bracket/.style={
+		decorate,
+		decoration={
+			brace,
+			amplitude=7pt
+		},
+		line width=1.5pt
+	}
+}
+
+%%% THIS IS A HELPER GRID FOR TIKZ PICTURES %%%
+
+%\begin{center}
+%	\begin{tikzpicture}
+%		
+%		% Grid
+%		\draw[help lines, step=1] (-2,-2) grid (12,12);
+%
+%		% Axes
+%		\draw[->, line width=1] (-2,0) -- (12.5,0) node[right] {$x$};
+%		\draw[->, line width=1] (0,-2) -- (0,12.5) node[above] {$y$};
+%		
+%		% Axis labels
+%		\foreach \x in {-2,-1,1,2,...,12}
+%		\node[below] at (\x,0) {\small $\x$};
+%		
+%		\foreach \y in {-2,-1,1,2,...,12}
+%		\node[left] at (0,\y) {\small $\y$};
+%		
+%		% Your drawing
+%		\draw[spring] (0,0) -- (10,10);
+%	\end{tikzpicture}
+%\end{center}
+
+
+
+%%% THIS HELPS CHECK HEIGHT/WIDTHS OF PICTURES %%%
+
+%\newsavebox{\mytikz}
+%\savebox{\mytikz}{%
+%	\begin{tikzpicture}[scale=0.5]
+%		...
+%	\end{tikzpicture}
+%}
+%\typeout{HEIGHT = \the\ht\mytikz}
+%\typeout{DEPTH  = \the\dp\mytikz}
+%\typeout{WIDTH  = \the\wd\mytikz}
+%height = \the\ht\mytikz
+%\\
+%depth = \the\dp\mytikz
+%\\
+%width = \the\wd\mytikz
+%\\
+%lines = \the\linewidth

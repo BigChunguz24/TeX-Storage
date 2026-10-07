@@ -1,0 +1,120 @@
+\newpage
+\Solution{3}
+Notice that the speed of sound is proportional to the square root of the temperature:
+\begin{equation*}
+	\left|
+	\begin{aligned}
+		& c = \sqrt{
+			\frac{\gamma p}{\rho}
+		}
+		\\
+		& p = \frac{\rho}{\mu} RT
+	\end{aligned}
+	\,\,\,
+	\right\}
+	c = \sqrt{
+	\frac{\gamma RT}{\mu}
+	}
+	\sim
+	\sqrt{T}
+	\tag{$*$}
+	\label{eq:j17_p3_mock_1}
+\end{equation*}
+Using the sound increase given in the problem and differentiating:
+\begin{equation*}
+	dc = \frac{1}{2} \sqrt{ \frac{\gamma R}{\mu T} } dT
+	\quad\Rightarrow\quad
+	\frac{\Delta c}{c} \approx
+	\frac{\Delta T}{2T}
+	\quad\Rightarrow\quad
+	\eta = \frac{\Delta c_0}{c} = \frac{\Delta T_0}{2 T}
+	\quad\Rightarrow\quad
+	\boxed{T = \frac{\Delta T_0}{2 \eta} = 250\,\mathrm{K}}
+	\tag{$1$}
+	\label{eq:j17_p3_1}
+\end{equation*}
+where $\Delta c_0$ is the increase in the speed of sound resulting from a temperature increase of  $\Delta T_0$.
+
+Now assume that the temperature has increased by some value $\Delta T$. The wavelength has changed:
+\begin{equation*}
+	\left|
+	\begin{aligned}
+		& \lambda = c(T) / \nu
+		\\
+		& \lambda' = c(T+\Delta T) / \nu
+	\end{aligned}
+	\right.
+\end{equation*}
+However the distance between the two points of interest remains unchanged:
+\begin{equation*}
+	\lambda N = \lambda' N'
+	\quad\Rightarrow\quad
+	\frac{N}{N'} = \frac{c(T+\Delta T)}{c(T)}
+	\approx
+	\frac{c(T) + \Delta c}{c(T)}
+	=
+	1 + \frac{\Delta c}{c}
+	\stackrel{(\refeq{eq:j17_p3_1})}{=}
+	1 + \frac{\Delta T}{2T}
+\end{equation*}
+A temperature increase would mean that the speed of sound increases, hence the number of wavelengths between the two points will decrease. Therefore, $N' < N$. For antiphase, we require $N' = N - 1/2$:
+\begin{equation*}
+	\frac{N}{N - 1/2} = 1 + \frac{\Delta T}{2T}
+	\quad\Rightarrow\quad
+	\boxed{\Delta T = \frac{2T}{2N - 1} \approx 0{,}303\,\mathrm{K}}
+	\quad\text{or}\quad
+	\boxed{\Delta T = \frac{\Delta T_0}{\eta (2N - 1)} \approx 0{,}303\,\mathrm{K}}
+	\tag{$2$}
+	\label{eq:j17_p3_2}
+\end{equation*}
+
+\textbf{\underline{Remarks:}} Set $\alpha = \sqrt{\gamma R / \mu}$ in (\refeq{eq:j17_p3_mock_1}). Then Taylor-expand the equation for the speed of sound:
+\begin{equation*}
+	c(T) = \alpha \sqrt{T} 
+	=
+	\alpha
+	\left(
+	\sqrt{T_0}
+	+
+	\frac{T - T_0}{2 \sqrt{T_0}}
+	-
+	\frac{ (T - T_0)^2}{8 T_0^{3/2}}
+	+
+	\text{etc.}
+	\right)
+\end{equation*}
+where we have expanded about a particular temperature $T_0$. Using a first-order approximation when temperature differences are small ($T \approx T_0$) yields:
+\begin{equation*}
+	c(T) 
+	\approx
+	\alpha \sqrt{T_0} 
+	+
+	\alpha \frac{T - T_0}{2 \sqrt{T_0}}
+	\quad\Rightarrow\quad
+	\boxed{
+	c(T) \approx \alpha \sqrt{T_0}
+	\left(
+	1 + \frac{1}{2T_0}
+	\left(T - T_0\right)
+	\right)
+	}
+\end{equation*}
+This is analogous to the familiar linear approximation for the temperature dependence of resistance:
+\begin{equation*}
+	\boxed{R(T) = R_0 (1 + \kappa (T - T_0))}
+\end{equation*}
+As long as the temperature difference remains small, we can define a ``temperature coefficient'':
+\begin{equation*}
+	\kappa_{eff} = \frac{1}{2 T_0}
+\end{equation*}
+We can also quickly check from the Taylor expansion that:
+\begin{equation*}
+	\frac{\Delta c}{c_0} = \frac{\Delta T}{2 T_0}
+	\quad\text{or}\quad
+	\eta = \kappa_{eff} \Delta T_0
+\end{equation*}
+where $c_0 = c(T_0)$ and we have evaluated $\Delta c / c_0$ at $\Delta T = \Delta T_0$. Therefore, our ``temperature coefficient'' is:
+\begin{equation*}
+	\boxed{\kappa_{eff} = \frac{\eta}{\Delta T_0}}
+\end{equation*}
+The idea is that a locally constant temperature coefficient could have been directly inferred from the problem statement as an approximation that could have been used in place of an explicit knowledge of the dependence $c = \sqrt{\gamma p / \rho}$. In fact, we do not need this formula at all to solve the problem!

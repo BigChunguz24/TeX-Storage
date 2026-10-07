@@ -1,0 +1,184 @@
+\newpage
+\section*{\centering Solutions}
+\Solution{1}
+Due to the upper strings being inextensible, points $A$ and $D$ must have zero velocity:
+\begin{equation*}
+	\boxed{v_A = 0}
+	\quad\text{and}\quad
+	\boxed{v_D = 0}
+	\tag{$1$}
+	\label{eq:j17_p1_1}
+\end{equation*}
+
+We can now draw the equivalent configuration by applying the rule for springs in series:
+\begin{equation*}
+	\frac{1}{k_{eff}} = \frac{1}{k_1} + \frac{1}{k_2} = 
+	\frac{1}{k} + \frac{1}{2k} = 
+	\frac{3}{2k}
+	\quad\Rightarrow\quad
+	\boxed{k_{eff} = \frac{2k}{3}}
+	\tag{$*$}
+	\label{eq:j17_p1_mock_1}
+\end{equation*}
+
+\input{figures_tex/p1_pulleys_equiv}
+
+When replacing springs in series by an equivalent spring, the total extension of the original springs is equal to the extension of the equivalent spring, and the endpoint velocities remain unchanged. Therefore, we can work directly with $\vv{v}_C$ and $\vv{v}_E$, which are also the velocities of the string segments connected to the pulley. Relative to the pulley, these velocities must have equal magnitudes and opposite directions:
+\begin{equation*}
+	v_C - v = -(v_E - v)
+	\quad\Rightarrow\quad
+	\boxed{v_C + v_E = 2v}
+	\tag{$**$}
+	\label{eq:j17_p1_mock_2}
+\end{equation*}
+Since the string is massless and inextensible, its tension is the same on both sides of the pulley. Therefore:
+\begin{equation*}
+	k_{eff} \Delta x_{eff} = 3k \Delta x_3
+	\quad\Rightarrow\quad
+	\frac{\Delta x_{eff}}{\Delta x_3}
+	=
+	\frac{3k}{k_{eff}}
+	\quad\Rightarrow\quad
+	\frac{v_C - v_A}{v_E - v_D}
+	=
+	\frac{9}{2}
+	\quad\Rightarrow\quad
+	\boxed{\frac{v_C}{v_E} = \frac{9}{2}}
+	\tag{$***$}
+	\label{eq:j17_p1_mock_3}
+\end{equation*}
+By equations (\ref{eq:j17_p1_mock_2}) and (\ref{eq:j17_p1_mock_3}) we conclude that:
+\begin{equation*}
+	\boxed{v_C = \frac{18v}{11}}
+	\quad\Rightarrow\quad
+	\boxed{v_E = \frac{4v}{11}}
+	\tag{$2$}
+	\label{eq:j17_p1_2}
+\end{equation*}
+This also gives us the velocity of the string relative to the rim of the pulley from (\ref{eq:j17_p1_mock_2}):
+\begin{equation*}
+	|v_{rel}| = |v_C - v| = |v_E - v| = \frac{7v}{11}
+	\quad\Rightarrow\quad
+	\boxed{|v_{rel}| = \frac{7v}{11}}
+	\tag{$3$}
+	\label{eq:j17_p1_3}
+\end{equation*}
+which has the direction depicted on the figure: on the LHS downward and on the RHS upward.
+
+To find the velocity of point $B$, observe that:
+\begin{equation*}
+	k_1 \Delta x_1 = k_{eff} \Delta x_{eff}
+	\quad\Rightarrow\quad
+	\frac{k_1}{k_{eff}} = \frac{\Delta x_{eff}}{\Delta x_1}
+	\quad\Rightarrow\quad
+	\frac{k}{2k/3} = \frac{v_C - v_A}{v_B - v_A}
+	\quad\Rightarrow\quad
+	\boxed{\frac{v_C}{v_B} = \frac{3}{2}}
+	\tag{$\star$}
+	\label{eq:j17_p1_mock_4}
+\end{equation*}
+Finally, applying (\ref{eq:j17_p1_mock_4}) to (\ref{eq:j17_p1_2}) we get:
+\begin{equation*}
+	\boxed{v_B = \frac{12v}{11}}
+	\tag{$4$}
+	\label{eq:j17_p1_4}
+\end{equation*}
+\newpage
+The only forces acting on the pulley are the force $\vv{F}$ and the two tensions $\vv{T}$ on either side:
+\\[-0.8\baselineskip]
+\begin{minipage}[t][75pt]{\textwidth}
+	\vspace{0pt}
+	\input{figures_tex/p1_pulley_force_diagram}
+	\begin{minipage}[t][72.86pt]{0.84\textwidth}
+		\vspace{7pt}
+		Considering that this is the same tension each spring carries:
+		\begin{equation*}
+			F = 2T = 2 k_3 \Delta x_3(t) = 6k (v_E - v_D) t
+			\quad\Rightarrow\quad
+			\boxed{F(t) = \frac{24kvt}{11}}
+			\tag{$5$}
+			\label{eq:j17_p1_5}
+		\end{equation*}
+		where we have used the extension of the spring with stiffness $k_3 = 3k$.
+	\end{minipage}
+\end{minipage}
+
+In the second part of the problem rest is assumed at $y=0$ at the initial moment $t=0$. We start by finding the equilibrium position of the pulley with mass and the effective stiffness of this system.
+
+Expression (\ref{eq:j17_p1_5}) gives us the magnitude of the external force required to keep the pulley moving with constant velocity. At every instant, this force balances the restoring force exerted by the springs. However, the appearance of the velocity $v$ of the pulley in (\ref{eq:j17_p1_5}) does not mean that the restoring force depends on the velocity of the pulley. It appears only because, under the prescribed motion, the displacement is \(x(t)=vt\). Thus, rewriting the force in terms of the displacement gives:
+\begin{equation*}
+	F(t) = F_{res}(x(t)) \equiv \frac{24kx(t)}{11}
+	\quad\Rightarrow\quad
+	F_{res}(x) = \frac{24kx}{11}
+	\tag{$\star\star$}
+	\label{eq:j17_p1_mock_5}
+\end{equation*}
+So, to avoid confusion\footnote{The confusion being: zero velocity at equilibrium $\rightarrow F(t) = 0$ by equation (\ref{eq:j17_p1_5}) $\rightarrow$ restoring force vanishes at equilibrium.}, we emphasize that these are different forces:
+\begin{description}
+	\item[$\rightarrow$] $F(t)$ in equation (\ref{eq:j17_p1_5}) describes an external force which keeps the pulley at $\vv{v} = \text{const}$;
+	\item[$\rightarrow$] $F_{res}(x)$ in equation (\ref{eq:j17_p1_mock_5}) describes the restoring force the springs provide to a displaced pulley;
+\end{description}
+To find the effective stiffness for the Spring-Pulley system:
+\begin{equation*}
+	F_{res}(x) = \kappa_{eff} x = \frac{24kx}{11}
+	\quad\Rightarrow\quad
+	\boxed{\kappa_{eff} = \frac{24k}{11}}
+	\tag{$6a$}
+	\label{eq:j17_p1_6a}
+\end{equation*}
+This directly gives us the angular frequency and the period of the small oscillations for the body:
+\begin{equation*}
+	\left.
+	T = 2 \pi \sqrt{\frac{m}{\kappa_{eff}}}
+	\quad\Rightarrow\quad
+	\boxed{T = \pi \sqrt{\frac{11m}{6k}}}
+	\quad\,\,\,\,
+	\right\vert
+	\quad
+	\omega = \sqrt{\frac{\kappa_{eff}}{m}}
+	\quad\Rightarrow\quad
+	\boxed{\omega = \sqrt{\frac{24k}{11m}}}
+	\tag{$6b$}
+	\label{eq:j17_p1_6b}
+\end{equation*}
+\begin{minipage}[t][158pt]{\textwidth}
+	\vspace{0pt}
+	\input{figures_tex/p1_spring_pulley_effective}
+\begin{minipage}[t][156.6pt]{0.74\textwidth}
+	\vspace{2pt}
+	To find the equilibrium position, we balance the forces:
+	\begin{equation*}
+		\kappa_{eff} y_{eq} = mg
+		\quad\Rightarrow\quad
+		\boxed{y_{eq} = \frac{11mg}{24k}}
+		\tag{$6c$}
+		\label{eq:j17_p1_6c}
+	\end{equation*}
+	As the body is released from $y=0$, it will pass through the equilibrium position, reach a maximum depth, then travel back up to its original position due to energy conservation. Therefore, the amplitude of the oscillations is exactly the distance between the initial position and the equilibrium position:
+	\begin{equation*}
+		\boxed{A = y_{eq} = \frac{11mg}{24k}}
+		\quad\text{and}\quad
+		\boxed{d = 2A = \frac{11mg}{12k}}
+		\tag{$7$}
+		\label{eq:j17_p1_7}
+	\end{equation*}
+\end{minipage}
+\end{minipage}
+To find the equation of motion, consider that about the equilibrium we have ($y^*$ and $y$ both point down):
+\begin{equation*}
+	y^*(t) = - A \cos(\omega t)
+\end{equation*}
+where it is easy to confirm the initial conditions i.e. $y^*(0) = -A$ and $v(0) = 0$, as required. Finally, the coordinate $y$ is just displaced by one amplitude with respect to the coordinate $y^*$:
+\begin{equation*}
+	y(t) = y^*(t) + A
+	\quad\Rightarrow\quad
+	\boxed{y(t) = A(1 - \cos(\omega t))}
+	\quad\text{or}\quad
+	\boxed{y(t) = \frac{11mg}{24k}
+		\left(
+		1 - \cos\left(\sqrt{\frac{24k}{11m}} t\right)
+		\right)}
+	\tag{8}
+	\label{eq:j17_p1_8}
+\end{equation*}
+Of course, using energies would produce the same result.

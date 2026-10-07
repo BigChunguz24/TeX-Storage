@@ -1,0 +1,19 @@
+%%%% Custom Commands %%%%
+
+\DeclareMathOperator{\Div}{div}
+
+% Define a problem counter that resets with the section
+\newcounter{problem}
+
+% Redefine the problem numbering to include section and problem numbers
+\renewcommand{\theproblem}{\arabic{problem}}
+
+% Define the Problem command
+\newcommand{\Problem}{\refstepcounter{problem}\fbox{\textbf{Problem \theproblem:}} }
+
+% Solution Definition
+\newcommand{\Solution}[1]{\textbf{Solution\ifthenelse{\equal{#1}{}}{}{ #1}:}}
+
+% This forces LaTeX to reserve vertical space as if every line had a fraction - use in \begin{aligned} .. \end{aligned}
+\newcommand{\rowstrut}{\vphantom{\dfrac{1}{2}}}
+%%%% Custom Commands %%%%

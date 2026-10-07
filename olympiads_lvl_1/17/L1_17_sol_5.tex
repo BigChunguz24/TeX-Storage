@@ -1,0 +1,408 @@
+\newpage
+\Solution{5}
+We treat each part separately:
+\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+	\item[$\bullet$] \textbf{\underline{Electron Starting At Infinity:}} We will use conservation of energy as follows:
+	\input{figures_tex/p5_infinity_electron}
+	\begin{equation*}
+		E_k^{\infty} + E_p^{\infty} = E_k + E_p
+		\quad\Rightarrow\quad
+		0 = \frac{1}{2} m_e v^2 - \frac{ke (\lambda 2 \pi R)}{R}
+		\quad\Rightarrow\quad
+		\frac{1}{2} m_e v^2 = \frac{e\lambda}{2\varepsilon_0}
+		\quad\Rightarrow\quad
+		\boxed{
+			v = \sqrt{
+				\frac{e\lambda}{m_e \varepsilon_0}
+			}
+		}
+		\tag{$1$}
+		\label{eq:j17_p5_1}
+	\end{equation*}
+	where we have used the following assumptions:
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\rightarrow$}]
+		\item[$\rightarrow$] Gravitational potential energy can be neglected as a whole;
+		\item[$\rightarrow$] $E_p^{\infty} \rightarrow 0$ at the starting moment, since the electron is far away from the ring;
+		\item[$\rightarrow$] $E_k^{ring} \rightarrow 0$ when the electron passes through the centre of the ring, since $M_{ring} >> m_e$;
+	\end{description}
+	\item[$\bullet$] \textbf{\underline{Electron Starting At Finite Distance}}
+	\input{figures_tex/p5_finite_electron}
+	
+	In this case only $E_k^{ring} \rightarrow 0$, so by conservation of energy:
+	\begin{equation*}
+		E_k^{0} + E_p^{0} = E_k + E_p
+		\,\,\Rightarrow\,\,
+		-\frac{k e (\lambda 2 \pi R)}{\sqrt{R^2 + \eta^2 R^2}} 
+		=
+		\frac{1}{2} m_e v^2 - \frac{ke(\lambda 2 \pi R)}{R}
+		\,\,\Rightarrow\,\,
+		\boxed{
+			v
+			=
+			\sqrt{
+				\frac{e \lambda}{m_e \varepsilon_0}
+				\left(
+				1 - \frac{1}{\sqrt{\eta^2 + 1}}
+				\right)
+			}
+		}
+		\tag{$2$}
+		\label{eq:j17_p5_2}
+	\end{equation*}
+	We can see that taking the limit of (\ref{eq:j17_p5_2}) at $\eta \rightarrow +\infty$ restores (\ref{eq:j17_p5_1}):
+	\begin{equation*}
+		\lim\limits_{\eta \rightarrow + \infty}
+		\left(
+		\sqrt{
+			\frac{e \lambda}{m_e \varepsilon_0}
+			\left(
+			1 - \frac{1}{\sqrt{\eta^2 + 1}}
+			\right)
+		}
+		\right)
+		=
+		\sqrt{
+			\frac{e \lambda}{m_e \varepsilon_0}
+		}
+	\end{equation*}
+	\item[$\bullet$] \textbf{\underline{The Period Of Small Oscillations}}
+	
+	To find the period of small oscillations. consider the electron a distance $x$ away from the centre of the ring along its axis. The potential energy, using Bernoulli's approximation, of the system is then:
+	\begin{equation*}
+		E_p(x) = - \frac{
+			ke (\lambda 2 \pi R)
+		}{\sqrt{R^2 + x^2}}
+		\approx
+		\frac{\lambda e}{2 \varepsilon_0}
+		\left(
+		\frac{x^2}{2R^2} - 1
+		\right)
+		\quad\rightarrow\quad
+		\boxed{k_{eff} = \frac{\lambda e}{2\varepsilon_0 R^2}}
+		\tag{$*$}
+		\label{eq:j17_p5_mock1}
+	\end{equation*}
+	where the constant term in the potential energy expression is just the potential energy of the system at equilibrium. As the ring is massive enough to neglect its motion, then the period of small oscillations is:
+	\begin{equation*}
+		T = 2 \pi \sqrt{\frac{m_e}{k_{eff}}}
+		\quad\Rightarrow\quad
+		\boxed{T = 2 \pi R \sqrt{\frac{2 m_e \varepsilon_0}{\lambda e}}}
+		\tag{$3$}
+		\label{eq:j17_p5_3}
+	\end{equation*}
+\end{description}
+
+\newpage
+\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+	\item[$\bullet$] \textbf{\underline{Force Approximation}}
+	
+	We require the magnitude of the difference to be no more than 1\% w.r.t. the linearized force:
+	\begin{equation*}
+		\frac{|F_x - F_{lin}|}{F_{lin}} \leq 0{,}01
+		\quad\Rightarrow\quad
+		\left|
+		1 - \frac{F_x}{F_{lin}}
+		\right|
+		\leq
+		0{,}01
+	\end{equation*}
+	
+	\begin{minipage}[t][117pt]{\textwidth}
+		\vspace{0pt}
+		\input{figures_tex/p5_force_diagram}
+		\begin{minipage}[t][116pt]{0.64\textwidth}
+			\vspace{0pt}
+			We can easily get expressions for the forces from the diagram:
+			\begin{equation*}
+				\left|
+				\begin{aligned}
+					& F_x = \frac{ke (\lambda 2 \pi R)}{r^2} \cdot \frac{x}{r}
+					=
+					\frac{\lambda e}{2 \varepsilon_0 R^2}
+					\cdot
+					\frac{x}{(1 + (x/R)^2)^{3/2}}
+					\\
+					& F_{lin} = k_{eff} x = \frac{\lambda e x}{2\varepsilon_0 R^2}
+				\end{aligned}
+				\right.
+			\end{equation*}
+			We can now plug these in the above expression:
+			\begin{equation*}
+				1 - \frac{1}{(1 + (x/R)^2)^{3/2}} \leq 0{,}01
+			\end{equation*}
+		\end{minipage}
+	\end{minipage}
+	
+	\vspace{1em}
+	where the modulus sign has now been dropped. Finishing the calculation:
+	\begin{equation*}
+		\boxed{x \leq R \sqrt{0{,}99^{-2/3} - 1}}
+		\quad\text{or}\quad
+		\boxed{x \leq 0{,}082 R}
+		\tag{$4$}
+		\label{eq:j17_p5_4}
+	\end{equation*}
+	The force approximation becomes $1\%$ inaccurate at about $8{,}2\%$ of the ring radius.
+	\item[$\bullet$] \textbf{\underline{Period Approximation}}
+	
+	Let the amplitude be $A = \gamma R$ and release the electron from rest from it. By conservation of energy:
+	\begin{equation*}
+		- \frac{k e (\lambda 2 \pi R)}{\sqrt{A^2 + R^2}} 
+		=
+		\frac{1}{2} m v^2 
+		-
+		\frac{k e (\lambda 2 \pi R)}{\sqrt{A^2 + x^2}}
+		\quad\Rightarrow\quad
+		\boxed{
+		(v(x))^2 = 
+			\frac{e \lambda}{m_e \varepsilon_0}
+			\left(
+			\frac{1}{\sqrt{1 + (x/R)^2}}
+			-
+			\frac{1}{\sqrt{1 + \gamma^2}}
+			\right)
+		}
+		\tag{$5a$}
+		\label{eq:j17_p5_5a}
+	\end{equation*}
+	Now use the Taylor expansion in (\ref{eq:j17_p5_5a}) for the following (taken from the Appendix):
+	\begin{equation*}
+		\frac{1}{\sqrt{1+x}} = 1 - \frac{1}{2} x + \frac{3}{8} x^2 + \mathcal{O}(x^3)
+		\,\Rightarrow\,
+		(v(x))^2 = \frac{e\lambda}{m_e \varepsilon_0}
+		\left(
+		1 -
+		\frac{1}{\sqrt{1 + \gamma^2}}
+		-
+		\frac{1}{2} \left(\frac{x}{R}\right)^2
+		+
+		\frac{3}{8} \left(\frac{x}{R}\right)^4
+		+
+		\mathcal{O}\left(\left(\frac{x}{R}\right)^6\right)
+		\right)
+	\end{equation*}
+	Introduce the constant $K$ as follows and rewrite:
+	\begin{equation*}
+		\left|
+		\begin{aligned}
+			& K = 1 - \frac{1}{\sqrt{1 + \gamma^2}} 
+			=
+			\frac{1}{2} \gamma^2 
+			-
+			\frac{3}{8} \gamma^4
+			+
+			\mathcal{O}(\gamma^6)
+			\rowstrut
+			\\
+			& v(x) =
+			\sqrt{
+			\frac{e\lambda}{m_e \varepsilon_0}
+			\left(
+			K - \frac{1}{2} \left(\frac{x}{R}\right)^2
+			+
+			\frac{3}{8} \left(\frac{x}{R}\right)^4
+			+
+			\mathcal{O}\left(\left(\frac{x}{R}\right)^6\right)
+			\right)
+			}
+			\rowstrut
+		\end{aligned}
+		\right.
+		\tag{$5b$}
+		\label{eq:j17_p5_5b}
+	\end{equation*}
+	Finding the period requires evaluating the following integral\footnote{Note that $dt = - dx / v(x)$ as $dt > 0$ and $dx < 0$.}:
+	\begin{equation*}
+		T = 4\int\limits_{0}^{T/4} dt =  
+		- 4 \int\limits_{A}^{0} \frac{dx}{v(x)}
+		=
+		4 \sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+		\int\limits_{0}^{A}
+		\left(
+		K - \frac{1}{2} \left(\frac{x}{R}\right)^2
+		+
+		\frac{3}{8} \left(\frac{x}{R}\right)^4
+		+
+		\mathcal{O}\left(\left(\frac{x}{R}\right)^6\right)
+		\right)^{-1/2}
+		dx
+	\end{equation*}
+	We will now expand $K$ first in the integrand and later expand the integrand itself (see remark):
+	\begin{equation*}
+		T = 
+		4 \sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+		\int\limits_{0}^{A}
+		\left(
+		\frac{1}{2} \gamma^2 - \frac{3}{8} \gamma^4 - \frac{1}{2} \left(\frac{x}{R}\right)^2
+		+
+		\frac{3}{8} \left(\frac{x}{R}\right)^4
+		+
+		\mathcal{O}(\gamma^6)
+		\right)^{-1/2}
+		dx
+		\tag{$**$}
+		\label{eq:j17_p5_mock2}
+	\end{equation*}
+	Here we used the fact that $\gamma = A/R$, i.e. it follows that $x / R = \mathcal{O}(\gamma)$ over the interval of integration, so we simply included the $\mathcal{O}((x/R)^6)$ term inside $\mathcal{O}(\gamma^6)$. Factor out a zero at $x = A$ (also see remark):
+	\begin{equation*}
+		T
+		=
+		4 \sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+		\int\limits_{0}^{A}
+		\left(
+		\frac{A^2 - x^2}{2R^2}
+		-
+		\frac{3(A^4 - x^4)}{8R^4}
+		+
+		\mathcal{O}(\gamma^6)
+		\right)^{-1/2} dx
+	\end{equation*}
+	\begin{equation*}
+		T
+		=
+		4 \sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+		\int\limits_{0}^{A}
+		\frac{R \sqrt{2}}{\sqrt{A^2 - x^2}}
+		\left(
+		1
+		-
+		\frac{3(A^2 + x^2)}{4R^2}
+		+
+		\mathcal{O}(\gamma^4)
+		\right)^{-1/2} dx
+	\end{equation*}
+	Finally, we can approximate the expression in the brackets:
+	\begin{equation*}
+		T
+		\approx
+		4 \sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+		\int\limits_{0}^{A}
+		\frac{R \sqrt{2}}{\sqrt{A^2 - x^2}}
+		\left(
+		1
+		+
+		\frac{3(A^2 + x^2)}{8R^2}
+		\right) 
+		dx
+		=
+		4R \sqrt{\frac{2m_e \varepsilon_0}{e \lambda}}
+		\int\limits_{0}^{A}
+		\left(
+		\frac{1}{\sqrt{A^2 - x^2}}
+		+
+		\frac{3 (A^2 + x^2)}{8R^2 \sqrt{A^2 - x^2}}
+		\right)
+		dx
+	\end{equation*}
+	Evaluating these integrals yields:
+	\begin{equation*}
+		\left|
+		\begin{aligned}
+			& \int\limits_{0}^{A} \frac{dx}{\sqrt{A^2 - x^2}} = \frac{\pi}{2}
+			\rowstrut
+			\\
+			& \int\limits_{0}^{A} \frac{A^2 + x^2}{\sqrt{A^2 - x^2}} dx
+			=
+			\frac{3 \pi A^2}{4}
+		\end{aligned}
+		\,\,
+		\right\}
+		\quad
+		\boxed{
+		T
+		\approx
+		2 \pi R \sqrt{\frac{2 m_e \varepsilon_0}{e \lambda}}
+		\left(1 + \frac{9A^2}{16R^2}\right)
+		}
+		\tag{$6$}
+		\label{eq:j17_p5_6}
+	\end{equation*}
+	Notice that this is larger than the period for small oscillations from equation (\ref{eq:j17_p5_3}). Therefore we require:
+	\begin{equation*}
+		\frac{
+		|T - T_0|
+		}{T_0} \leq 0{,}01
+		\quad\Rightarrow\quad
+		\left|
+		1 - \frac{T}{T_0}
+		\right| \leq 0{,}01
+		\quad\Rightarrow\quad
+		\frac{9A^2}{16R^2} \leq 0{,}01
+	\end{equation*}
+	Solving for $A$ gives:
+	\begin{equation*}
+		\boxed{A \leq \frac{4}{30} R}
+		\quad\Rightarrow\quad
+		\boxed{A \leq 0{,}133 R}
+		\tag{$7$}
+		\label{eq:j17_p5_7}
+	\end{equation*}
+	The period approximation becomes $1\%$ inaccurate at about $13{,}3\%$ of the ring radius.
+\end{description}
+\textbf{\underline{Remarks:}} Getting to expand an expression under the integral sign can get tricky. Take for example the expression from (\ref{eq:j17_p5_mock2}) and factor out the first term, then apply the Taylor expansion:
+	\begin{equation*}
+		\begin{aligned}
+			T 
+			&= 
+			4 \sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+			\int\limits_{0}^{A}
+			\left(
+			\frac{1}{2} \gamma^2 - \frac{3}{8} \gamma^4 - \frac{1}{2} \left(\frac{x}{R}\right)^2
+			+
+			\frac{3}{8} \left(\frac{x}{R}\right)^4
+			+
+			\mathcal{O}(\gamma^6)
+			\right)^{-1/2}
+			dx
+			\approx
+			\rowstrut
+			\\
+			&\approx
+			4 \sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+			\int\limits_{0}^{A}
+			\frac{\sqrt{2}}{\gamma}
+			\left(
+			1 - \frac{3}{4} \gamma^2 
+			-
+			\frac{1}{\gamma^2} \left(\frac{x}{R}\right)^2 
+			+
+			\frac{3}{4\gamma^2} \left(\frac{x}{R}\right)^4
+			\right)^{-1/2} dx
+			\approx
+			\rowstrut
+			\\
+			&\approx
+			4 \sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+			\int\limits_{0}^{A}
+			\frac{R \sqrt{2}}{A}
+			\left(
+			1 + \frac{3A^2}{8R^2} + \frac{x^2}{2A^2}
+			-
+			\frac{3x^4}{8A^2 R^2}
+			\right)
+			dx =
+			\rowstrut
+			\\
+			&= 
+			\sqrt{\frac{m_e \varepsilon_0}{e \lambda}}
+			\left(
+			\frac{14 \sqrt{2}}{3} R + \frac{6 \sqrt{2} A^2}{5R}
+			\right)
+		\end{aligned}
+\end{equation*}
+which is a radically different expression from what we got. So where did we go wrong?
+
+Notice that the original expression from (\ref{eq:j17_p5_mock2}) is $1 / v(x)$ and it admits $v(A) = 0$ at the end of the integration interval. In this example, when we factored out $\gamma^2 / 2$, we lost this property. We get on the second line of the above calculation an expression of the form $(1 + u(x, \gamma))^{-1/2}$ the binomial expansion of which requires $|x| < 1$. However, $u(A, \gamma) = -1$ (because $v(A) = 0$) which violates this condition whenever $x \rightarrow A$. 
+
+Expanding in this way destroys the zero of \(v(x)\) at the turning point and therefore destroys the corresponding integrable singularity of \(1/v(x)\). Although the expansion may be valid away from the endpoint, it is not uniform on the entire interval \(0\le x\le A\), and hence it cannot in general be integrated term by term to obtain the correct asymptotic expansion of the period.
+
+This is why, in the previous derivation, it was important to first factor out \(A^2-x^2\). Doing so preserves the turning-point behaviour explicitly:
+
+\begin{equation*}
+	\frac{1}{v(x)}
+	\sim
+	\frac{1}{\sqrt{A^2-x^2}}
+	\left(1+\mathcal{O}\!\left(\frac{A^2}{R^2}\right)\right)
+\end{equation*}
+
+after which the remaining expansion is uniformly small over the integration interval.

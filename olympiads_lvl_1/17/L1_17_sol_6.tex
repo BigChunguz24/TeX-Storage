@@ -1,0 +1,70 @@
+\newpage
+\Solution{6}
+We have two conditions present:
+\begin{description}
+	\item[$\rightarrow$] The vessels are thermally insulated, so $Q = 0$;
+	\item[$\rightarrow$] The gas does no work on the vacuum, so $A = 0$;
+\end{description}
+By the First Law of Thermodynamics:
+\begin{equation*}
+	Q = \Delta U + A
+	\quad\Rightarrow\quad
+	\Delta U = 0
+	\quad\Rightarrow\quad
+	\boxed{\Delta T = 0}
+	\tag{$1$}
+	\label{eq:j17_p6:1}
+\end{equation*}
+where the latter follows from the fact that for an ideal gas $U = U(T)$.
+
+Although the actual free expansion is irreversible, entropy is a function of state, so we can calculate $\Delta S$ using a convenient reversible process or combination of processes. The easiest choice to make for this case, due to equation (\ref{eq:j17_p6:1}), is a \emph{\underline{reversible isothermal process}}\footnote{It is instructive to choose a different process and verify that the same result is achieved. For example, the answer for $\Delta S$ can be verified using an isobaric process and an isochoric process, ``connecting'' the initial and final states.}:
+\begin{equation*}
+	\Delta S = \int\limits_1^2 \frac{dQ_{rev}}{T}
+	=
+	\int\limits_{V_1}^{V_2}
+	\nu R \frac{dV}{V}
+	=
+	\nu R \ln\left(\frac{V_2}{V_1}\right)
+	\quad\Rightarrow\quad
+	\boxed{\Delta S = \nu R \ln(n) \approx 20{,}1\,\mathrm{J/K}}
+	\tag{$2$}
+	\label{eq:j17_p6_2}
+\end{equation*}
+Note that this does not mean the original process is not isothermal: it is an \emph{\underline{irreversible isothermal process}}.
+
+\textbf{\underline{Remarks:}} Here entropy increases, despite $Q = 0$. It is important to understand that:
+\begin{equation*}
+	dS = \frac{dQ_{rev}}{T}
+\end{equation*}
+holds only for a \emph{\underline{reversible}} process. More generally, for an arbitrary process:
+\begin{equation*}
+	\boxed{dS \geq \frac{dQ}{T}}
+\end{equation*}
+with equality only in the reversible case.
+
+In the present problem, the entropy increase does not originate from heat supplied to the gas. Instead, it is a consequence of the \emph{\underline{irreversibility}} of the free expansion: the gas initially occupies only one of the vessels, while after opening the valve it spontaneously occupies the larger available volume. The number of accessible microscopic states of the gas consequently increases. Therefore, for one particle we can state:
+\begin{equation*}
+	\Omega \sim V
+\end{equation*}
+where the momentum-space contribution is unchanged, since  $\Delta T = 0$.
+
+For $N$ particles, the number of accessible microstates is proportional to:
+\begin{equation*}
+	\Omega \sim V^N
+	\quad\Rightarrow\quad
+	\frac{\Omega_2}{\Omega_1} = \left(\frac{V_2}{V_1}\right)^N
+	=
+	n^N
+\end{equation*}
+Finally, using Boltzmann's Entropy Relation:
+\begin{equation*}
+	S = k \ln(\Omega)
+	\quad\Rightarrow\quad
+	\Delta S = k \ln\left(\frac{\Omega_2}{\Omega_1}\right)
+	=
+	Nk \ln(n)
+	\quad\Rightarrow\quad
+	\boxed{\Delta S = \nu R \ln(n) \approx 20{,}1\,\mathrm{J/K}}
+\end{equation*}
+
+This also illustrates why, when calculating the entropy change of an irreversible process, one may replace the actual process by any convenient reversible process connecting the same initial and final equilibrium states. The reversible process is used only as a means of calculating the state-function difference $\Delta S$; it is not a description of what actually happens to the gas.

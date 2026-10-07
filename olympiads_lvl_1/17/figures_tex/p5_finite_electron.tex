@@ -1,0 +1,18 @@
+\begin{center}
+	\begin{tikzpicture}
+		% Ellipse
+		\draw[line] (10, 4) ellipse (0.25cm and 2cm);
+		\node[point] at (10, 4) {};
+		
+		% Electron
+		\node[point] at (2, 4) {};
+		\node[above] at (2, 4) {$e^-$};
+		
+		% Vector and Dashed Line
+		\draw[line, dashed] (2, 4) -- (10, 4);
+		\draw[line, -{Stealth}] (2, 4) -- (4, 4)
+		node[above=1pt] {$\vv{v} = \vv{0}$};
+		\draw[bracket] (10, 3.95) -- (2, 3.95)
+		node[midway, below=5pt] {$\eta R$};
+	\end{tikzpicture}
+\end{center}

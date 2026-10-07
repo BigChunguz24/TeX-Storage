@@ -1,0 +1,112 @@
+\documentclass[a4paper]{article}
+
+\input{packages}
+\input{custom_commands}
+\input{patterns_L1_17}
+\input{tikz_commands}
+
+\usepackage[english]{babel}
+
+\usepackage[
+left=2.5cm,
+right=2.5cm,
+top=3cm,
+bottom=2.5cm
+]{geometry}
+
+\setlength{\droptitle}{-7em}
+\title{\Huge Physics Olympiad L1-17}
+\author{BigChunguz24 - Last Edit 23/09/2026}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\vspace{-1.25em}
+	\Problem
+	% Национална Олимпиада По Физика 2025 - Тема 10 Клас - Задача 3, Част 2
+	\textbf{\underline{Spring-Pulley System}}
+	\\
+	Three massless springs with spring constants $k$, $2k$ and $3k$ are connected by inextensible strings to a horizontal ceiling and a massless pulley as shown. At a certain moment, under the action of an external force $\vv{F}$ that increases smoothly with time, the pulley starts moving downward with a constant velocity $\vv{v}$.
+	\begin{description}
+		\item[$\bullet$] Find the velocities of points $A, B, C, D$ and $E$;
+		\item[$\bullet$] Find the velocity of the string $CE$ relative to the rim of the pulley;
+		\item[$\bullet$] Find the time dependence of the force $\vv{F}(t)$ if it is known that $\vv{F}(0) = \vv{0}$;
+	\end{description}
+	Now assume that the Spring-Pulley system is at rest at height $y=0$, where the $y$-axis points downwards. At $t=0$, a body of mass $m$ is attached to the pulley and released from rest.
+	\begin{description}
+		\item[$\bullet$] Find the equation of motion $y(t)$ of the body;
+		\item[$\bullet$] Find the period $T$ and angular frequency $\omega$ of the oscillations;
+		\item[$\bullet$] Find the maximum depth $d$ that the body reaches during this motion;
+	\end{description}
+	
+	\input{figures_tex/p1_pulleys}
+	
+	\Problem 
+	% Национална Олимпиада По Физика 2013 - Тема 10-12 Клас - Задача 2, Част 1
+	\textbf{\underline{Metal Ring in Magnetic Field}}
+	\\
+	A metal ring of radius $r = 0{,}1\,\mathrm{m}$ and resistance $R = 2{,}0\,\mathrm{\Omega}$ is positioned horizontally in a uniform vertical magnetic field of magnitude $B_0 = 5{,}0\cdot10^{-5}\,\mathrm{T}$. It is then flipped over so that its other side faces upward.
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] What magnitude of electric charge $q$ passes through the cross section of the ring?
+		\item[$\bullet$] The ring is flipped uniformly in a time $\tau = 1\,\mathrm{s}$. Find the magnitude of the current as a function of time;
+	\end{description}
+	Thermal effects and self-inductance can be ignored.
+
+	\Problem
+	% Национална Олимпиада По Физика 2013 - Тема 10-12 Клас - Задача 2, Част 2
+	\textbf{\underline{Counting Waves}}
+	\\
+	Between two points on a sound wave, which vibrate in phase, there are $N = 825$ wavelengths. When the temperature of the medium is increased by $\Delta T_0 = 1\,\mathrm{K}$, the speed of sound increases by $\eta = 0{,}2\,\%$. 
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] Find the temperature $T$ of the medium;
+		\item[$\bullet$] What temperature increase $\Delta T$ is required for the two points to start vibrating in antiphase?
+	\end{description}
+	The medium is assumed to be an ideal gas and the frequency of the sound remains constant.
+
+	\Problem
+	% 3800 Задач Физике - 4.39
+	\textbf{\underline{Resultant of Parallel Forces}}
+	\\
+	Two parallel and equally directed forces $F_1$ and $F_2$ are applied to a rigid body. Prove that:
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] The resultant force is parallel to the applied forces and directed in the same direction;
+		\item[$\bullet$] The magnitude of the resultant force is equal to the sum of the magnitudes of the applied forces;
+		\item[$\bullet$] The line of action of the resultant passes through a point that divides the segment between the points of application of the two forces into parts that are inversely proportional to the force magnitudes;
+	\end{description}
+	
+	\Problem
+	% 3800 Задач Физике - 11.231 + 11.232 + 11.233
+	\textbf{\underline{Electron-Ring Interactions}}
+	\\
+	We consider the motion of an electron along the axis of a uniformly charged ring with linear charge density $\lambda > 0$. Assuming the mass of the ring to be much larger than that of the electron, find:
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] With what speed will the $e^-$ pass through the centre of the ring if it is attracted from infinity?
+		\item[$\bullet$] With what speed will the $e^-$ pass through the centre of the ring if it is attracted from distance $\eta R$?
+		\item[$\bullet$] What is the period of small oscillations of the $e^-$ about the centre of the ring along its axis?
+		\item[$\bullet$] What is the largest amplitude for which the magnitude of the restoring force differs from that predicted by the small-oscillation approximation by no more than $1\,\%$? Specify your answer as a multiple of $R$.
+		\item[$\bullet$] What is the largest amplitude for which the period of oscillation differs from that predicted by the small-oscillation approximation by no more than $1\,\%$? Specify your answer as a multiple of $R$.
+	\end{description}
+	The electron has mass $m_e$ and charge $-e$. The radius of the ring is $R$ and $\eta$ is a real number ($\eta \in \mathbb{R}^+$). In all situations where relevant, the electron starts its motion from rest. You may use appropriate approximations and/or cutoffs where necessary.
+	
+	\Problem
+	% Irodov 2.148
+	\textbf{\underline{Free Expansion}}
+	\\
+	One of the two thermally insulated vessels interconnected by a tube with valve contains $\nu = 2{,}2$ moles of an ideal gas. The other vessel is evacuated. The valve having been opened, the gas increases its volume $n = 3{,}0$ times. Find the entropy increment of the gas.
+	
+	\input{../../appendix_formulae}
+%	\input{L1_17_sol_1}
+%	\input{L1_17_sol_2}
+%	\input{L1_17_sol_3}
+%	\input{L1_17_sol_4}
+%	\input{L1_17_sol_5}
+%	\input{L1_17_sol_6}
+	
+	% Национална Олимпиада По Физика 2025 - Тема 10 Клас - Задача 3, Част 2
+	% Национална Олимпиада По Физика 2013 - Тема 10-12 Клас - Задача 2, Част 1
+	% Национална Олимпиада По Физика 2013 - Тема 10-12 Клас - Задача 2, Част 2
+	% 3800 Задач Физике - 4.39
+	% 3800 Задач Физике - 11.231 + 11.232 + 11.233
+	% Irodov 2.148
+\end{document}

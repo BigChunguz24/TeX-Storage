@@ -1,0 +1,17 @@
+\begin{center}
+	\begin{tikzpicture}
+		% Ellipse
+		\draw[line] (10, 4) ellipse (0.25cm and 2cm);
+		\node[point] at (10, 4) {};
+		
+		% Electron
+		\node[point] at (2, 4) {};
+		\node[above] at (2, 4) {$e^-$};
+		\node[below] at (2, 4) {$\infty$};
+		
+		% Vector and Dashed Line
+		\draw[line, dashed] (2, 4) -- (10, 4);
+		\draw[line, -{Stealth}] (2, 4) -- (4, 4)
+		node[above=1pt] {$\vv{v} = \vv{0}$};
+	\end{tikzpicture}
+\end{center}

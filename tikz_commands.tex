@@ -1,0 +1,117 @@
+\tikzset{
+	battery/.style={
+		draw=none,
+		decorate,
+		decoration={
+			markings,
+			mark=at position 0.5 with {
+				% Connectors
+				\draw[line] (-\pgfdecoratedcompleteddistance,0) -- (-4,0);
+				\draw[line] (4,0) -- (\pgfdecoratedcompleteddistance,0);
+				% Battery
+				\draw[line] (-4, -20) -- (-4, 20);
+				\draw[line] (4, -10) -- (4, 10);
+				% Polarity
+				\node[above] at (-4, -15) {$+$};
+				\node[below] at (4, -15) {$-$};
+			}
+		}
+	}
+}
+
+\tikzset{
+	switch/.style={
+		draw=none,
+		decorate,
+		decoration={
+			markings,
+			mark=at position 0.5 with {
+				% Connectors
+				\draw[line] (-\pgfdecoratedcompleteddistance,0) -- (-15,0);
+				\draw[line] (15,0) -- (\pgfdecoratedcompleteddistance,0);
+				% Switch
+				\draw[line] (-12.5,0) circle (2.5);
+				\draw[line] (12.5, 0) circle (2.5);
+				\draw[line] (-10,0) -- (10,7);
+			}
+		}
+	}
+}
+
+\tikzset{
+	spring/.style={
+		decorate,
+		decoration={
+			coil,
+			aspect=0.6,
+			segment length=7pt,
+			amplitude=6pt,
+			pre length=5pt,
+			post length=5pt
+		},
+		line width=1.5
+	}
+}
+
+\tikzset{
+	line/.style={
+		line width=1.5pt,
+	}
+}
+
+\tikzset{
+	point/.style={
+		circle,
+		fill=black,
+		inner sep=1.5pt
+	}
+}
+
+
+
+%%% THIS IS A HELPER GRID FOR TIKZ PICTURES %%%
+
+%\begin{center}
+%	\begin{tikzpicture}
+%		
+%		% Grid
+%		\draw[help lines, step=1] (-2,-2) grid (12,12);
+%		
+%		% Axes
+%		\draw[->, line width=1] (-2,0) -- (12.5,0) node[right] {$x$};
+%		\draw[->, line width=1] (0,-2) -- (0,12.5) node[above] {$y$};
+%		
+%		% Axis labels
+%		\foreach \x in {-2,-1,1,2,...,12}
+%		\node[below] at (\x,0) {\small $\x$};
+%		
+%		\foreach \y in {-2,-1,1,2,...,12}
+%		\node[left] at (0,\y) {\small $\y$};
+%		
+%		% Your drawing
+%		\draw[spring] (0,0) -- (10,10);
+%		
+%	\end{tikzpicture}
+%\end{center}
+
+
+
+%%% ROTATING ARROW HEADS %%%
+
+% To rotate {Stealth} in place use the flex' command:
+%\draw[
+%line,
+%-{Stealth[length=7pt,flex'=0.9]}] 
+%(175,186.5) arc (90:270:12.5);
+
+
+
+%%% EXAMPLE HATCHING FOR SURFACES %%%
+%\begin{scope}
+%	\clip (350,100) rectangle (425,275);
+%	
+%	\foreach \x in {175,183,...,425} {
+%		\draw[line width=0.75pt]
+%		(\x,100) -- ++(175,+175);
+%	}
+%\end{scope}

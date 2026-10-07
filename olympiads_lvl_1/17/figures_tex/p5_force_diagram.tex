@@ -1,0 +1,25 @@
+\begin{minipage}[t][116pt]{0.35\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}
+		% Ellipse
+		\draw[line] (10, 4) ellipse (0.25cm and 2cm);
+		\node[point] at (10, 4) {};
+		\draw[line, dashed] (10, 4) -- (11, 4);
+		\draw[line, dashed] (10, 6) -- (11, 6);
+		\draw[line, Stealth-Stealth] (11, 4.05) -- (11, 5.95)
+		node[midway, right] {$R$};
+		
+		% Electron
+		\node[point] at (7, 4) {};
+		\node[left] at (7, 4) {$e^-$};
+		\draw[line, dashed] (7, 4) -- (10, 4)
+		node[midway, below] {$x$};
+		\draw[line] (7, 4) -- (10, 6)
+		node[midway, above] {$r$};
+		
+		% Force
+		\draw[line, -{Stealth}] (7, 4) -- (8, 4)
+		node[below] {$F_x$};
+	\end{tikzpicture}
+\end{minipage}

@@ -1,0 +1,54 @@
+\begin{minipage}[t][143pt]{0.5\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}
+		% Forces
+		\node[point] at (3, 6) {};
+		\node[point] at (6, 10) {};
+		
+		\node[below left] at (3, 6) {$A$};
+		\node[above] at (6, 10) {$B$};
+		
+		\draw[line, -{Stealth}] (3, 6) -- (5.5, 6);
+		\draw[line, -{Stealth}] (6, 10) -- (7.5, 10);
+		
+		\node[right] at (5.5, 6) {$\vv{F_1}$};
+		\node[right] at (7.5, 10) {$\vv{F_2}$};
+		
+		% Resultant force
+		\draw[line, -{Stealth}] (5.25, 9) -- (9, 9);
+		\node[point] at (5.25, 9) {};
+		\node[right] at (9, 9) {$\vv{F}_{res}$};
+		
+		% CM line
+		\draw[line, dashed] (3, 7.5) -- (8, 7.5);
+		
+		\node[above] at (7, 7.5) {\text{CM line of}};
+		\node[below] at (7, 7.5) {\text{action}};
+		
+		% Triangle
+		\draw[line] (3, 6) -- (6, 10);
+		\draw[line, dashed] (3, 6) -- (3, 10);
+		\draw[line, dashed] (3, 10) -- (6, 10);
+		\draw[line, dashed] (5.25, 9) -- (3, 9);
+		
+		\node[point] at (4.125, 7.5) {};
+		\node[point] at (3, 7.5) {};
+		\node[point] at (3, 10) {};
+		\node[point] at (3, 9) {};
+		
+		\node[below] at (4.2, 7.5) {$C$};
+		\node[left] at (3, 7.5) {$M$};
+		\node[left] at (3, 10) {$N$};
+		\node[above right] at (3, 9) {$T$};
+		\node[above] at (5.2, 9) {$S$};
+		
+		% Brackets and dimensions
+		\draw[bracket] (3, 6) -- (3, 7.5)
+		node[midway, left=5pt] {$x$};
+		\draw[bracket] (3, 7.5) -- (3, 10)
+		node[midway, left=5pt] {$y$};
+		\draw[line, Stealth-Stealth] (3.5, 7.55) -- (3.5, 8.95)
+		node[midway, right] {$c$};
+	\end{tikzpicture}
+\end{minipage}

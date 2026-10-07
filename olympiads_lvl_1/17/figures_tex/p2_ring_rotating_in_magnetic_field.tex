@@ -1,0 +1,32 @@
+\begin{center}
+	\begin{tikzpicture}
+		% Ellipses
+		\draw[line] (3, 4) ellipse (2cm and 0.25cm);
+		\draw[line, rotate around={-30:(9, 4)}] (9, 4) ellipse (2cm and 0.25cm);
+		\node[point] at (3, 4) {};
+		\node[point] at (9, 4) {};
+		
+		% B-fields
+		\draw[line, -{Stealth}] (3, 4) -- (3, 6);
+		\draw[line, -{Stealth}] (9, 4) -- (9, 6);
+		
+		\node[above] at (3, 6) {$\vv{B}$};
+		\node[above] at (9, 6) {$\vv{B}$};
+		
+		% Normals
+		\draw[line, -{Stealth}] (3, 4) -- (3, 5);
+		\draw[line, -{Stealth}, rotate around={-30:(9, 4)}] (9, 4) -- (9, 5);
+		
+		\node[right] at (3, 5) {$\hat{n}$};
+		\node[right] at (9.5, 4.85) {$\hat{n}$};
+		
+		% Angle
+		\coordinate (A) at (9, 6);
+		\coordinate (B) at (9, 4);
+		\coordinate (C) at (9.5, 4.85);
+		
+		\pic [draw, line, angle radius=0.5cm] {angle=C--B--A};
+		
+		\node[left] at (9.05, 4.61) {$\varphi$};
+	\end{tikzpicture}
+\end{center}

@@ -1,0 +1,169 @@
+\newpage
+\vspace*{-5em}
+\enlargethispage{\baselineskip}
+\newcommand{\tg}{\operatorname{tg}}
+\newcommand{\arctg}{\operatorname{arctg}}
+\section*{\centering Appendix}
+\section*{\centering Useful Mathematical Formulae and Physical Constants}
+\emph{\underline{Important}}: Infinite series that are marked with $(*)$ are only valid under the condition that $|x| < 1$.
+
+\begin{minipage}[t]{0.5\textwidth}
+	\vspace{0pt}
+	\begin{tcolorbox}[title=\textbf{Taylor Expansions}]
+		\vspace{-10pt}
+		\begin{align*}
+			& \sin(x) = x - \frac{x^3}{6} + \frac{x^5}{120} + \mathcal{O}(x^7)
+			&&
+			\\[1pt]
+			& \cos(x) = 1 - \frac{x^2}{2} + \frac{x^4}{24} - \frac{x^6}{720} + \mathcal{O}(x^8)
+			&&
+			\\[1pt]
+			& \tg(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + \mathcal{O}(x^7)
+			&&
+			\\[1pt]
+			& \arcsin(x) = x + \frac{x^3}{6} + \frac{3x^5}{40} + \mathcal{O}(x^7)
+			&&
+			\\[1pt]
+			& \arctg(x) = x - \frac{x^3}{3} + \frac{x^5}{5} + \mathcal{O}(x^7)
+			&&
+			\\[1pt]
+			& \exp(x) = 1 + x + \frac{x^2}{2} + \mathcal{O}(x^3)
+			&&
+			\\[1pt]
+			& \ln(1+x) = x - \frac{1}{2}x^2 + \mathcal{O}(x^3)
+			&& (*)
+			\\[1pt]
+			& (1-x)^{-1} = 1 + x + x^2 + \mathcal{O}(x^3)
+			&& (*)
+			\\[1pt]
+			& (1+x)^{-1} = 1 - x + x^2 + \mathcal{O}(x^3)
+			&& (*)
+			\\[1pt]
+			& (1+x)^{+\frac{1}{2}} = 1 + \frac{1}{2}x - \frac{1}{8}x^2 + \mathcal{O}(x^3)
+			&& (*)
+			\\[1pt]
+			& (1+x)^{-\frac{1}{2}} = 1 - \frac{1}{2} x + \frac{3}{8} x^2 + \mathcal{O}(x^3)
+			&& (*)
+			\\[1pt]
+			& (1+x)^{+\frac{3}{2}} = 1 + \frac{3}{2}x + \frac{3}{8}x^2 + \mathcal{O}(x^3)
+			&& (*)
+			\\[1pt]
+			& (1+x)^{-\frac{3}{2}} = 1 - \frac{3}{2}x + \frac{15}{8}x^2 + \mathcal{O}(x^3)
+			&& (*)
+		\end{align*}
+		
+	\end{tcolorbox}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\vspace{0pt}
+	\begin{tcolorbox}[title=\textbf{Inverse Hyperbolic Functions}]
+		\vspace{-10pt}
+		\begin{align*}
+			& \text{arsinh}(x) = \ln(x + \sqrt{x^2 + 1})
+			\\[3.0375pt]
+			& \text{arcosh}(x) = \ln(x + \sqrt{x^2 - 1})
+			\\[3.0375pt]
+			& \text{artgh}(x) = \frac{1}{2} \ln
+			\left(
+			\frac{1+x}{1-x}
+			\right)
+			\\[3.0375pt]
+			& \text{arctgh}(x) = \frac{1}{2} \ln
+			\left(
+			\frac{x+1}{x-1}
+			\right)
+		\end{align*}
+		
+	\end{tcolorbox}
+	\begin{tcolorbox}[title=\textbf{Indefinite Integrals}]
+		\vspace{-10pt}
+		\begin{align*}
+			& \int (1-x^2)^{-\frac{3}{2}} dx = \frac{x}{\sqrt{1-x^2}} + C
+			\\[3.0375pt]
+			& \int (1+x^2)^{-\frac{3}{2}} dx = \frac{x}{\sqrt{1 + x^2}} + C
+			\\[3.0375pt]
+			& \int (1-x^2)^{-\frac{1}{2}} dx = \arcsin(x) + C
+			\\[3.0375pt]
+			& \int (1+x^2)^{-\frac{1}{2}} dx = \text{arsinh}(x) + C
+			\\[3.0375pt]
+			& \int (1-x^2)^{+\frac{1}{2}} dx = \frac{\arcsin(x) + x \sqrt{1-x^2}}{2} + C
+			\\[3.0375pt]
+			& \int (1+x^2)^{+\frac{1}{2}} dx = \frac{\text{arsinh}(x) + x \sqrt{1 + x^2}}{2} + C
+		\end{align*}
+		
+	\end{tcolorbox}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+	\begin{tcolorbox}[title=\textbf{Useful Physical Constants}]
+		\vspace{-5pt}
+		\begin{center}
+			\begin{tabular}{|l|c|c|c|}
+				\hline
+				\textbf{Constant} & \textbf{Symbol} & \textbf{Value} & \textbf{Measuring Units} 
+				\\
+				\hline
+				Light speed in vacuum & $c$ & $3{,}000 \times 10^8$ & $\mathrm{m/s}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Rest mass of electron & $m_e$ & $9{,}109 \times 10^{-31}$ & $\mathrm{kg}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Rest mass of proton & $m_p$ & $1{,}673 \times 10^{-27}$ & $\mathrm{kg}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Rest mass of neutron & $m_n$ & $1{,}675 \times 10^{-27}$ & $\mathrm{kg}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Rest mass of muon & $m_{\mu}$ & $1{,}884 \times 10^{-28}$ & $\mathrm{kg}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Rest mass of tau-lepton & $m_{\tau}$ & $3{,}168 \times 10^{-27}$ & $\mathrm{kg}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Elementary charge & $e$ & $1{,}602 \times 10^{-19}$ & $\mathrm{C}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Planck's constant & $h$ & $6{,}626 \times 10^{-34}$ & $\mathrm{Js}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Boltzmann's constant & $k$ & $1{,}381 \times 10^{-23}$ & $\mathrm{J/K}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Gravitational constant & $\gamma$ & $6{,}673 \times 10^{-11}$ & $\mathrm{Nm^2/kg^2}$ 
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Dielectric permittivity of vacuum & $\varepsilon_0$ & $8{,}854 \times 10^{-12}$ & $\mathrm{F/m}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Avogadro's number & $N_A$ & $6{,}022 \times 10^{23}$ & $\mathrm{mol^{-1}}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Rydberg's constant & $R_{\infty}$ & $1{,}097 \times 10^7$ & $\mathrm{m^{-1}}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Magnetic permeability of vacuum & $\mu_0$ & $4\pi \times 10^{-7}$ & $\mathrm{H/m}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+				Universal gas constant & $R$ & $8{,}314$ & $\mathrm{J / (mol \cdot K)}$
+				\rule{0pt}{10pt}
+				\\[1pt]
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{tcolorbox}
+\end{minipage}

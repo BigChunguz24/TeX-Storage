@@ -1,0 +1,20 @@
+\begin{minipage}[t][72.86pt]{0.15\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[scale=0.5]
+		% Pulley
+		\draw[line] (6, 6) circle[radius=1];
+		\node[point] at (6, 6) {};
+		
+		% Downward Force
+		\draw[line, -{Stealth}] (6, 6) -- (6, 3);
+		\node[right] at (6, 4) {$\vv{F}$};
+		
+		% Tensions
+		\draw[line, -{Stealth}] (5, 6) -- (5, 7.5);
+		\draw[line, -{Stealth}] (7, 6) -- (7, 7.5);
+		
+		\node[left] at (5, 7.5) {$\vv{T}$};
+		\node[right] at (7, 7.5) {$\vv{T}$};
+	\end{tikzpicture}
+\end{minipage}

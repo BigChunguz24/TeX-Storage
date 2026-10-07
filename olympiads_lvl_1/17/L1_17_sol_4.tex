@@ -1,0 +1,56 @@
+\newpage
+\Solution{4}
+If $\vv{F}_1$ and $\vv{F}_2$ are parallel, then there exists some vector $\vv{u}$ which is perpendicular to both:
+\begin{equation*}
+	\vv{u} \cdot \vv{F}_1 = 0
+	\quad\text{and}\quad
+	\vv{u} \cdot \vv{F}_2 = 0
+\end{equation*}
+Then for the resultant force we show:
+\begin{equation*}
+	\vv{u} \cdot \vv{F}_{res}
+	=
+	\vv{u} \cdot 
+	\left(
+	\vv{F}_1 + \vv{F}_2
+	\right)
+	=
+	\vv{u} \cdot \vv{F}_1
+	+
+	\vv{u} \cdot \vv{F}_2
+	=
+	0
+	\quad\Rightarrow\quad
+	\boxed{\vv{u} \cdot \vv{F}_{res} = 0}
+	\tag{$1$}
+	\label{eq:j17_p4_1}
+\end{equation*}
+Since $\vv{F}_{res}$ is also perpendicular to $\vv{u}$, then we have shown that it is parallel to both $\vv{F}_1$ and $\vv{F}_2$. Given this, the vector diagram for $\vv{F}_{res} = \vv{F}_1 + \vv{F}_2$ degenerates to a line segment. Therefore:
+\begin{equation*}
+	\boxed{F_{res} = F_1 + F_2
+	}
+	\tag{$2$}
+	\label{eq:j17_p4_2}
+\end{equation*}
+\begin{minipage}[t][145pt]{\textwidth}
+	\vspace{0pt}
+	\input{figures_tex/p4_force_diagram}
+	\begin{minipage}[t][143pt]{0.49\textwidth}
+		\vspace{2pt}
+		For the last part consider the shown diagram. Assume that the distances from the lines of action of $\vv{F}_1$ and $\vv{F}_2$ to the line of action of the centre of mass are $x$ and $y$ respectively. In addition, let the distance from the line of action of $\vv{F}_{res}$ to the centre of mass line of action be $c$. From the torque law:
+		\begin{equation*}
+			F_2 y - F_1 x = F_{res} c = (F_1 + F_2) c
+		\end{equation*}
+		Some algebra yields:
+		\begin{equation*}
+			F_1 (x + c) = F_2 (y - c)
+		\end{equation*}
+	\end{minipage}
+\end{minipage}
+Notice that $x + c = AT$ and $y - c = TN$. Then we have:
+\begin{equation*}
+	\boxed{\frac{AT}{TN} = \frac{F_2}{F_1} = \frac{AS}{SB}}
+	\tag{$3$}
+	\label{eq:j17_p4_3}
+\end{equation*}
+where the last equality follows from Thales' Theorem.

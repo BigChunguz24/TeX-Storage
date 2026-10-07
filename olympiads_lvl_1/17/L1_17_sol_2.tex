@@ -1,0 +1,82 @@
+\newpage
+\Solution{2}
+We will begin with the second part of the question. The flipping is performed uniformly:
+\begin{equation*}
+	\boxed{\omega = \frac{\pi}{\tau}}
+	\tag{$1$}
+	\label{eq:j17_p2_1}
+\end{equation*}
+
+\input{figures_tex/p2_ring_rotating_in_magnetic_field}
+
+We can directly calculate the induced EMF in the ring as a function of time:
+\begin{equation*}
+	\varepsilon 
+	= 
+	-\frac{d\Phi_B}{dt}
+	=
+	- \frac{d}{dt}
+	\left(
+	\vv{B} \cdot \vv{S}
+	\right)
+	=
+	-\frac{d}{dt}
+	\left(
+	\pi r^2 B \cos(\varphi)
+	\right)
+	=
+	\pi r^2 B \sin(\varphi) \frac{d\varphi}{dt}
+	\quad\Rightarrow\quad
+	\boxed{
+	\varepsilon(t)
+	=
+	\pi r^2 \omega B \sin(\omega t)
+	}
+	\tag{$2$}
+	\label{eq:j17_p2_2}
+\end{equation*}
+Using equation (\ref{eq:j17_p2_1}) and Ohm's law:
+\begin{equation*}
+	i(t) = \frac{\varepsilon(t)}{R}
+	\quad\Rightarrow\quad
+	\boxed{i(t) = \frac{\pi^2 r^2 B}{R\tau} \sin\left(\frac{\pi t}{\tau}\right)}
+	\tag{$3$}
+	\label{eq:j17_p2_3}
+\end{equation*}
+The charge is then given by:
+\begin{equation*}
+	\Delta q
+	=
+	\int_0^\tau i(t)\,dt
+	=
+	\frac{1}{R}
+	\int_0^\tau \varepsilon(t)\,dt
+	=
+	\frac{\pi r^2 B}{R}
+	\int_0^\pi \sin\varphi\,d\varphi
+	\quad\Rightarrow\quad
+	\boxed{
+		\Delta q 
+		= 
+		\frac{2\pi r^2 B}{R} 
+		\approx 1{,}57\,\mathrm{\mu C}
+		}
+	\tag{$4$}
+	\label{eq:j17_p2_4}
+\end{equation*}
+Note that this result does not depend on how the ring is flipped, provided it starts and ends in the same orientations. Consequently, the exact time dependence of the current  $i(t)$ is irrelevant for the total charge transferred. Only the initial and final magnetic fluxes matter:
+\begin{equation*}
+	\varepsilon = R \frac{dq}{dt} = - \frac{d\Phi_B}{dt}
+	\quad\Rightarrow\quad
+	\left|\Delta q \right|
+	= 
+	\frac{\left| \Delta \Phi_B \right|}{R} = 
+	\frac{\pi r^2 B - (- \pi r^2 B)}{R}
+	\quad\Rightarrow\quad
+	\boxed{
+		\left| \Delta q \right|
+		= 
+		\frac{2\pi r^2 B}{R} 
+		\approx 1{,}57\,\mathrm{\mu C}
+	}
+\end{equation*}

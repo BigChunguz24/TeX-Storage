@@ -1,0 +1,37 @@
+\begin{minipage}[t][156.6pt]{0.25\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}
+		% Ceiling
+		\draw[line] (1.5, 12) -- (3.5, 12);
+		
+		% Ceiling hatchings
+		\foreach \x in {1.5, 1.75, ..., 3.5}
+		\draw[line] (\x, 12) -- ++(0.25,0.25);
+		
+		% String - Spring - String
+		\draw[line] (2.5, 12) -- (2.5, 11.5);
+		\draw[spring] (2.5, 11.5) -- (2.5, 9.5);
+		\draw[line] (2.5, 9.5) -- (2.5, 9);
+		\node[left] at (2.3, 10.5) {$\kappa_{eff}$};
+		
+		% Mass
+		\draw[line] (2, 8.5) rectangle (3, 9);
+		\node at (2.5, 8.75) {$m$};
+		
+		% Axis - Equilibrium
+		\draw[line, -{Stealth}] (1, 12) -- (1, 7);
+		\node[left] at (1, 7) {$y$};
+		
+		\draw[line, dashed] (1, 8.75) -- (2, 8.75);
+		\node[left] at (1, 8.75) {$eq$};
+		
+		\draw[line] (0.8, 9.75) -- (1.2, 9.75);
+		\node[left] at (0.8, 9.75) {$0$};
+		
+		\draw[line] (0.8, 7.75) -- (1.2, 7.75);
+		\node[left] at (0.8, 7.75) {$2A$};
+		
+		\draw[line, Stealth-Stealth] (3.25, 8.25) -- (3.25, 9.25);
+	\end{tikzpicture}
+\end{minipage}
