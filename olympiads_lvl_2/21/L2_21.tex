@@ -1,0 +1,114 @@
+\documentclass[a4paper]{article}
+
+\input{patterns_L2_21}
+\input{../../packages}
+\input{../../custom_commands}
+\input{../../tikz_commands}
+
+\usepackage[english]{babel}
+
+\usepackage[
+left=2.5cm,
+right=2.5cm,
+top=3cm,
+bottom=2.5cm
+]{geometry}
+
+\setlength{\droptitle}{-7em}
+\title{\Huge Physics Olympiad L2-21}
+\author{BigChunguz24 - Last Edit 30/09/2026}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\vspace{-1em}
+	\Problem
+	% Foundation Mathematics For The Physical Sciences Riley - 3.22 + 14.9 + 14.10
+	\textbf{\underline{The Tangential-Polar Coordinate System}}
+	\\
+	A two-dimensional coordinate system useful for orbit problems is the tangential-polar coordinate system. In this system, the position of a point $P$ on a curve is described by two quantities:
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\rightarrow$}]
+		\item[$\rightarrow$] The distance $r$ from a fixed point $O$ to a point $P$ on the curve;
+		\item[$\rightarrow$] The perpendicular distance $p$ from $O$ to the tangent to the curve at $P$;
+	\end{description}
+	where the point $O$ is taken as the \emph{\underline{origin}} of the coordinate system.
+	
+	Consider two neighbouring points $P$ and $Q$ on the curve given by $r(p)$. The normals to the curve at points $P$ and $Q$ intersect at $C$, which, in the limit $Q \rightarrow P$, is called the centre of the \underline{\emph{osculating circle}} at $P$. Its radius $CP = \rho$ is called the \underline{\emph{radius of curvature}} at $P$. 
+	\begin{description}
+		\item[$\bullet$] Obtain an expression for the radius of curvature $\rho$ in terms of $r$ and $dr/dp$;
+	\end{description}
+	Consider a particle of mass $m$ moving under the influence of an attractive central force of magnitude $f$, directed towards the origin $O$. Let the speed be given by $v(r)$. Then:
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] Find an expression for the magnitude of the force in terms of $m$, $v$ and $dv/dr$;
+		\item[$\bullet$] Find an expression for the kinetic energy in terms of $f$, $p$, $r$ and $dp/dr$;
+		\item[$\bullet$] Show that $h = mpv$ is a conserved quantity;
+		\item[$\bullet$] Show that the force can be expressed entirely in terms of $h$, $m$, $r$, $p$ and $dp/dr$;
+	\end{description}
+	Let $\varphi$ denote the angle between the tangent to the curve at $P$ and the radius vector $OP$. Determine the central force law under which a particle must move so as to describe the following trajectories:
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] A circle of radius $a$ that is centered a distance $c$ away from the force origin;
+		\item[$\bullet$] A centered equiangular spiral, for which the angle $\varphi$ is constant along the curve;
+	\end{description}
+	
+	\vspace{-1em}
+	\input{figures_tex/p1_tangential_polar_coordinates}
+	
+	\Problem
+	% Irodov 6.40 + Addition
+	\textbf{\underline{Emission From An Inelastic Collision}}
+	\\
+	A hydrogen atom moving with kinetic energy $E_k$ collides head-on with an identical hydrogen atom initially at rest. Both atoms are initially in their ground states. Assume that the collision is inelastic and that it is sufficiently short that photon emission during the collision itself can be neglected.
+	
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] Estimate the kinetic energy $E_{k}^{rel}$ at which the motion of a hydrogen atom becomes relativistic;
+		\item[$\bullet$] Determine the minimum kinetic energy $E_{k}^{min}$ of the incident atom for which the collision can leave one of the atoms capable of emitting a photon. Find the wavelength $\lambda$ at which it would be emitted;
+		\item[$\bullet$] Determine the velocities of the two atoms immediately after the collision at the threshold energy $E_{k}^{min}$;
+	\end{description}
+	
+	\Problem
+	% Irodov 5.155
+	\textbf{\underline{Rotating Crystal}}
+	\\
+	A monochromatic beam of $X$-rays with wavelength $\lambda=174\,\mathrm{pm}$ falls on the surface of a crystal rotating about an axis parallel to its surface and perpendicular to the direction of the incident beam. As the crystal rotates, diffraction maxima are observed for different orientations of the crystal. The directions of the second- and third-order diffraction maxima from the same family of lattice planes form an angle $\varphi=60^\circ$. Find the corresponding interplanar distance.
+	
+	\Problem
+	% Irodov 3.292
+	\textbf{\underline{Rotating Loop}}
+	\\
+	A wire loop enclosing a semi-circle of radius $a$ is located on the boundary of a uniform magnetic field of induction $\vv{B}$. At the moment $t=0$ the loop is set into rotation with a constant angular acceleration $\vv{\varepsilon}$ about an axis $O$ coinciding with a line of vector $\vv{B}$ on the boundary. 
+	\begin{description}
+		\item[$\bullet$] Find the emf induced in the loop as a function of time $t$;
+		\item[$\bullet$] Draw the approximate plot of this function;
+	\end{description}
+	The arrow in the figure shows the direction of rotation and the emf direction taken to be positive.
+	
+	\input{figures_tex/p4_rotating_loop}
+	
+	\Problem
+	% Irodov 1.272
+	\textbf{\underline{Rotating Rod}}
+	\\
+	A smooth uniform rod $AB$ of mass $M$ and length $l$ rotates freely with an angular velocity $\omega_0$ in a horizontal plane about a stationary vertical axis passing through its end $A$. A small sleeve of mass $m$ starts sliding along the rod from the point $A$. Find the velocity $v_r$ of the sleeve relative to the rod at the moment it reaches its other end $B$.
+	
+	\Problem
+	% Irodov 4.135
+	\textbf{\underline{Effective Current}}
+	\\
+	Find the effective value of current if its mean value is $I_0$ and its dependence is:
+	\begin{description}
+		\item[$\bullet$] as shown in the figure below;
+		\item[$\bullet$] $I \sim \lvert sin(\omega t) \rvert$
+	\end{description}
+	
+	\input{figures_tex/p6_effective_current}
+	
+	\input{../../appendix_formulae}
+	
+	% Foundation Mathematics For The Physical Sciences Riley - 3.22 + 14.9 + 14.10
+	% Irodov 6.40 + Addition
+	% Irodov 5.155
+	% Irodov 3.292
+	% Irodov 1.272
+	% Irodov 4.135
+\end{document}
