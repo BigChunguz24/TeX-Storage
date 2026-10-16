@@ -1,0 +1,174 @@
+\documentclass[a4paper]{article}
+
+\input{../../packages}
+\input{../../custom_commands}
+\input{../../tikz_commands}
+\input{patterns_L2_26}
+
+\usepackage[english]{babel}
+
+\usepackage[
+left=2.5cm,
+right=2.5cm,
+top=3cm,
+bottom=2.5cm
+]{geometry}
+
+\setlength{\droptitle}{-7em}
+\title{\Huge Physics Olympiad L2-26}
+\author{BigChunguz24 - Last Edit 16/10/2026}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\Problem
+	\textbf{\underline{Dielectric Ball}}
+	% Irodov 3.96, 3.98
+	\\
+	In this question we study a uniform dielectric ball of radius $R$ and relative permittivity $\varepsilon$ in two settings:
+	\begin{description}[leftmargin=0pt, labelwidth=0pt,]
+		\item[Setting 1:] The dielectric ball is placed in vacuum in a uniform external electric field of strength $\vv{E}_0$.
+		\begin{description}[
+			leftmargin=!,
+			labelwidth=\widthof{$\bullet$},
+			labelindent=\widthof{$\bullet\bullet$}
+			]
+			\item[$\bullet$] Find the electric field strength $\vv{E}$ inside the ball and the polarization $\vv{P}$ of the dielectric; 
+		\end{description}
+		\begin{description}[
+			leftmargin=!,
+			labelwidth=\widthof{$\bullet$},
+			labelindent=\widthof{}
+			]
+			\item[] A ball that is polarized in this way may be represented as a result of a small rigid shift $d \ll R$ of all positive charges of the dielectric relative to all the negative ones. It can be assumed that there are $n$ atoms per unit volume of the dielectric, each with atomic number $Z$.
+		\end{description}
+		\begin{description}[
+			leftmargin=!,
+			labelwidth=\widthof{$\bullet$},
+			labelindent=\widthof{$\bullet\bullet$}
+			]
+			\item[$\bullet$] Justify why the electric field outside of the ball behaves like a dipole at the centre of the ball;
+			\item[$\bullet$] Find an expression for the total electric potential outside of the ball;
+			\item[$\bullet$] Find an expression for the total electric field outside of the ball;
+			\item[$\bullet$] Find an expression for the small shift $d$;
+		\end{description}
+		\item[Setting 2:] Three such dielectric balls are fixed on the vertices of an equilateral triangle of side $a \gg R$. The configuration is then placed in a uniform external electric field of strength $\vv{E}_0$ so that the field is perpendicular to one of the sides of the triangle. Assume that $\vv{E}_0$ acts in the plane of the triangle and that enough time has passed for the system to reach equilibrium.
+		\begin{description}[
+			leftmargin=!,
+			labelwidth=\widthof{$\bullet$},
+			labelindent=\widthof{$\bullet\bullet$}
+			]
+			\item[$\bullet$] Taking the potential energy to be zero when the three balls are infinitely separated from each other, find the potential energy of this configuration;
+		\end{description}
+	\end{description}
+	\emph{\underline{Note:}} You should not use the dipole trick for the first part of ``Setting 1''. 
+	
+	\Problem 
+	\textbf{\underline{Fresnel Mirrors}}
+	% Irodov 5.71
+	\\
+	The below figure illustrates the interference experiment with Fresnel mirrors $M_1$ and $M_2$. The angle between the mirrors is $\varphi = 12'$, the distances from their intersection line to the narrow slit $S$ and the screen are equal to $r = 10\,\mathrm{cm}$ and $b = 130\,\mathrm{cm}$ respectively. The wavelength of light is $\lambda = 0{,}55\,\mu\mathrm{m}$. Find:
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] The width of a fringe on the screen and the number of possible maxima;
+		\item[$\bullet$] The shift of the interference pattern on the screen when the slit is displaced by $\delta l = 1\,\mathrm{mm}$ along the arc of radius $r$ with centre at the point of intersection of the mirrors;
+		\item[$\bullet$] At what maximum width $\delta_{max}$ of the slit the interference fringes on the screen are still observed sufficiently sharp.
+	\end{description}
+	
+	\input{figures_tex/p2_fresnel_mirrors}
+	
+	\Problem
+	\textbf{\underline{Polarization}}
+	% Irodov 5.178
+	\\
+	What kind of polarization has a plane electromagnetic wave if the projections of the vector $\vv{E}$ on the $x$ and $y$ axes are perpendicular to the propagation direction and are defined as:
+	\begin{description}
+		\item[$\bullet$] $E_x = E \cos(\omega t - kz)$ and $E_y = E \cos(\omega t - kz)$
+		\item[$\bullet$] $E_x = E \cos(\omega t - kz)$ and $E_y = E \cos(\omega t - kz + \pi/4)$
+		\item[$\bullet$] $E_x = E \cos(\omega t - kz)$ and $E_y = E \cos(\omega t - kz + \pi/2)$
+		\item[$\bullet$] $E_x = E \cos(\omega t - kz)$ and $E_y = E \cos(\omega t - kz + 3\pi/4)$
+		\item[$\bullet$] $E_x = E \cos(\omega t - kz)$ and $E_y = E \cos(\omega t - kz + \pi)$
+	\end{description}
+	
+	\Problem
+	\textbf{\underline{Efficiency}}
+	% Irodov 2.128
+	\\
+	Using the Clausius inequality, show that all cycles having the same maximum temperature $T_{max}$ and minimum temperature $T_{min}$ are less efficient compared to the Carnot cycle with the same $T_{max}$ and $T_{min}$.
+	
+	\Problem
+	\textbf{\underline{The Reduced Compton Wavelength and Compton Scattering}}
+	% Irodov 5.280, 5.281, 5.282 + Original
+	\begin{description}[leftmargin=!, labelwidth=\widthof{$\bullet$}]
+		\item[$\bullet$] \textbf{The Scale and The Reduced Compton Wavelength}
+		\\
+		In this problem you could assume that the effective mass of a photon is given by the following relation:
+		\begin{equation*}
+			\boxed{\hbar \omega = m_{eff} c^2}
+		\end{equation*}
+		
+		\begin{itemize}[leftmargin=0.5cm]
+			\item[$\rightarrow$] Compose an expression for a quantity whose dimension is length, using the velocity of light $c$, mass of a particle $m$, and Planck's constant $\hbar$. This expression is the reduced Compton wavelength $\bar{\lambda}$;
+			\item[$\rightarrow$] Evaluate $\bar{\lambda}_e$ for an electron and find the frequency $\nu$ of a photon of the same reduced wavelength $\bar{\lambda}_e$;
+			\item[$\rightarrow$] Estimate the spatial scale $\Delta x$ to which an electron must be confined for its kinetic energy to become comparable to its rest energy. What qualitatively new process becomes possible below this size?
+			\item[$\rightarrow$] In the \textbf{Bohr model of hydrogen} the radius $a_0$ of the ground-state orbit is called the
+			\textbf{Bohr radius}. The ratio of the electron's
+			reduced Compton wavelength $\bar{\lambda}_e$ to the
+			Bohr radius defines the \textbf{fine-structure constant} $\alpha$:
+			\begin{equation*}
+				\boxed{\alpha \coloneq \frac{\bar{\lambda}_e}{a_0}}
+			\end{equation*}
+			Derive an expression for $\alpha$ in terms of $e$, $\varepsilon_0$,
+			$\hbar$ and $c$, and evaluate its numerical value;
+		\end{itemize}
+		\item[$\bullet$] \textbf{Absorption of a Photon}
+		\begin{itemize}[leftmargin=0.5cm]
+			\item[$\rightarrow$] Prove that a free electron cannot absorb a photon completely;
+			\item[$\rightarrow$] A hydrogen atom, initially at rest in its ground state, absorbs a photon and goes to the excited state $n=2$. Find the exact energy $E_{\gamma}$ of the photon and the kinetic
+			energy $E_k$ of the recoiling atom. Hence, evaluate the ratio $\eta$ which shows by how much $E_{\gamma}$ exceeds $\Delta E$:
+			\begin{equation*}
+				\eta = \frac{\left| E_{\gamma} - \Delta E \right| }{\Delta E}
+			\end{equation*}
+			where $\Delta E$ is the excitation energy of the atom in its rest frame. Any approximations you make should be thoroughly reasoned for and explicitly shown to be appropriate;
+		\end{itemize}
+		\item[$\bullet$] \textbf{Compton Scattering}
+		\begin{itemize}[leftmargin=0.5cm]
+			\item[$\rightarrow$] Derive the Compton shift $\Delta \lambda$ for scattering on a free electron at rest;
+			\item[$\rightarrow$] Express the energy $E_\gamma'$ of the
+			scattered photon in terms of the incident photon energy
+			$E_\gamma$ and the scattering angle $\varphi$. Hence, determine
+			the kinetic energy $E_k$ of the recoiling electron;
+			\item[$\rightarrow$] Determine the maximum possible wavelength
+			shift and the corresponding scattering angle. Express the result
+			in terms of the reduced Compton wavelength $\bar{\lambda}_e$
+			and evaluate it numerically;
+			\item[$\rightarrow$] Determine the maximum kinetic energy of
+			the recoiling electron. Examine the limiting cases
+			$E_\gamma \ll m_e c^2$ and $E_\gamma \gg m_e c^2$ and explain
+			their physical significance;
+		\end{itemize}
+	\end{description}
+	
+	\Problem
+	\textbf{\underline{Resistor Circuit}}
+	% Irodov 3.190
+	\\
+	A DC source of electromotive force $\varepsilon$ and internal
+	resistance $R_0$ is connected to three identical resistors, each
+	of resistance $R$, as shown in the figure. The two long connecting branches drawn above and below the three resistors each have resistance $r$, while all other connecting wires have negligible resistance.
+	\begin{description}
+		\item[$\bullet$] Obtain an expression for the total thermal power $P$ dissipated in the three resistors;
+		\item[$\bullet$] Determine the value of $R$ in terms of $R_0$ for which $P$ is maximized when $r = R_0$ and find $P_{max}$;
+	\end{description}
+	
+	\input{figures_tex/p6_resistor_circuit}
+	
+	\input{../../appendix_formulae}
+	
+	% Irodov 3.96, 3.98
+	% Irodov 5.71
+	% Irodov 5.178
+	% Irodov 2.128
+	% Irodov 5.280, 5.281, 5.282 + Original
+	% Irodov 3.190
+\end{document}

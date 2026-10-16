@@ -1,0 +1,28 @@
+\begin{center}
+	\begin{tikzpicture}
+		% Resistors				
+		\draw[resistor] (1, 1) -- (4, 1);
+		\draw[resistor] (4, 1) -- (7, 1);
+		\draw[resistor] (7, 1) -- (10, 1);
+		
+		% Terminals
+		\draw[line] (1, 1) -- (0.5, 1);
+		\node[terminal, xshift=-2.5pt] at (0.5, 1) {};
+		
+		\draw[line] (10, 1) -- (10.5, 1);
+		\node[terminal, xshift=2.5pt] at (10.5, 1) {};
+		
+		% Junctions
+		\node[point] at (1, 1) {};
+		\node[point] at (4, 1) {};
+		\node[point] at (7, 1) {};
+		\node[point] at (10, 1) {};
+		
+		% Connectors
+		\draw[line] (1, 1) -- (1, -0.5) -- (7, -0.5) -- (7, 1);
+		\draw[line] (4, 1) -- (4, 2.5) -- (10, 2.5) -- (10, 1);
+		
+		\node[below] at (4, -0.5) {$r$};
+		\node[above] at (7, 2.5) {$r$};
+	\end{tikzpicture}
+\end{center}

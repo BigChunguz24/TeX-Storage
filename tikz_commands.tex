@@ -1,3 +1,23 @@
+% Resistor
+\tikzset{
+	resistor/.style={
+		draw=none,
+		decorate,
+		decoration={
+			markings,
+			mark=at position 0.5 with {
+				% Connectors
+				\draw[line] (-\pgfdecoratedcompleteddistance,0) -- (-0.75,0);
+				\draw[line] (0.75,0) -- (\pgfdecoratedcompleteddistance,0);
+				% Resistor
+				\draw[line] (-0.75, 0.35) rectangle (0.75, -0.35);
+				\node[above, transform shape] at (0, 0.35) {$R$};
+			}
+		}
+	}
+}
+
+% Electrical battery (POSSIBLY FIX WITH RESISTOR CODE FOR OLYMPIAD 22)
 \tikzset{
 	battery/.style={
 		draw=none,
@@ -19,6 +39,7 @@
 	}
 }
 
+% Electrical switch
 \tikzset{
 	switch/.style={
 		draw=none,
@@ -38,6 +59,7 @@
 	}
 }
 
+% Springs or inductors
 \tikzset{
 	spring/.style={
 		decorate,
@@ -53,12 +75,29 @@
 	}
 }
 
+% A point for electrical terminals (radius = inner sep + line width / 2)
+% USAGE: \node[terminal, xshift=-2.5pt] at (1, 1) {};
 \tikzset{
-	line/.style={
+	terminal/.style={
+		circle,
+		draw=black,
 		line width=1.5pt,
+		inner sep=1.75pt,
+		append after command={
+			\pgfextra{
+				\edef\terminalname{\tikzlastnode}
+				\draw[black, line width=1.5pt]
+				([shift={(-4.5pt,-4.5pt)}]\terminalname.center) --
+				([shift={(-1.94pt,-1.94pt)}]\terminalname.center);
+				\draw[black, line width=1.5pt]
+				([shift={(1.94pt,1.94pt)}]\terminalname.center) --
+				([shift={(4.5pt,4.5pt)}]\terminalname.center);
+			}
+		}
 	}
 }
 
+% Just a point for junctions
 \tikzset{
 	point/.style={
 		circle,
@@ -67,6 +106,12 @@
 	}
 }
 
+% Standardized line
+\tikzset{
+	line/.style={
+		line width=1.5pt,
+	}
+}
 
 
 %%% THIS IS A HELPER GRID FOR TIKZ PICTURES %%%
@@ -115,3 +160,11 @@
 %		(\x,100) -- ++(175,+175);
 %	}
 %\end{scope}
+
+
+
+%%% EXAMPLE ANGLE ARC $$$
+% Angles
+%\draw[line]
+%(7,3)
+%arc[start angle=-180, end angle=0, radius=2];

@@ -1,0 +1,23 @@
+% Pattern Info
+
+\tikzset{
+	pattern size/.store in=\mcSize, 
+	pattern size = 5pt,
+	pattern thickness/.store in=\mcThickness, 
+	pattern thickness = 0.3pt,
+	pattern radius/.store in=\mcRadius, 
+	pattern radius = 1pt}
+\makeatletter
+\pgfutil@ifundefined{pgf@pattern@name@_bb9kre1tw}{
+	\pgfdeclarepatternformonly[\mcThickness,\mcSize]{_bb9kre1tw}
+	{\pgfqpoint{0pt}{-\mcThickness}}
+	{\pgfpoint{\mcSize}{\mcSize}}
+	{\pgfpoint{\mcSize}{\mcSize}}
+	{
+		\pgfsetcolor{\tikz@pattern@color}
+		\pgfsetlinewidth{\mcThickness}
+		\pgfpathmoveto{\pgfqpoint{0pt}{\mcSize}}
+		\pgfpathlineto{\pgfpoint{\mcSize+\mcThickness}{-\mcThickness}}
+		\pgfusepath{stroke}
+}}
+\makeatother
